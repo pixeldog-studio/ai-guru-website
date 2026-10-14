@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '@i18n/translations';
-import { useTranslations, getLocalizedPath } from '@i18n/utils';
+import { useTranslations } from '@i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -14,34 +14,9 @@ const appStoreUrl = 'https://apps.apple.com/app/hustlrr-every-ai-chat/id67379122
 <section id="features" class="px-5">
   <div class="mx-auto max-w-[1000px]">
 
-    <!-- Feature 1: Chat with AI on any webpage — IMAGE left, TEXT right -->
-    <div class="py-16 animate-reveal flex flex-col min-[1200px]:flex-row items-center gap-5 min-[1200px]:gap-[50px]">
-      <!-- Image card: 450×350 at desktop, 44px radius, overflow clips image -->
-      <div class="w-full max-w-[500px] min-[1200px]:max-w-none min-[1200px]:w-[450px] min-[1200px]:h-[350px] min-[1200px]:shrink-0 aspect-[9/7] min-[1200px]:aspect-auto rounded-[44px] overflow-hidden bg-[#15161a]/80">
-        <img
-          src="/images/feature-browse.jpg"
-          alt="Hustlrr browsing feature - chat with AI on any webpage"
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-      <!-- Text -->
-      <div class="w-full max-w-[500px] min-[1200px]:max-w-none min-[1200px]:flex-1 text-center min-[1200px]:text-left">
-        <h3 class="text-[35px] font-medium text-white mb-3">
-          {t('features.browsing.title')}
-        </h3>
-        <p class="text-[22px] font-medium text-text-secondary leading-relaxed mb-4">
-          {t('features.browsing.description')}
-        </p>
-        <a href={getLocalizedPath('/features/web-browsing', lang)} class="text-[16px] font-medium text-accent hover:text-accent-light transition-colors">
-          {t('page.learnMore')} &rarr;
-        </a>
-      </div>
-    </div>
-
-    <!-- Feature 2: Ask anything, do everything — TEXT left, IMAGE right -->
+    <!-- Feature 1: Ask anything, do everything — TEXT left, IMAGE right -->
     <div class="py-16 animate-reveal flex flex-col min-[1200px]:flex-row-reverse items-center gap-5 min-[1200px]:gap-[50px]">
-      <!-- Image card -->
+      <!-- Image card: 450×350 at desktop, 44px radius, overflow clips image -->
       <div class="w-full max-w-[500px] min-[1200px]:max-w-none min-[1200px]:w-[450px] min-[1200px]:h-[350px] min-[1200px]:shrink-0 aspect-[9/7] min-[1200px]:aspect-auto rounded-[44px] overflow-hidden bg-[#15161a]/80">
         <img
           src="/images/feature-ask.jpg"
@@ -74,7 +49,7 @@ const appStoreUrl = 'https://apps.apple.com/app/hustlrr-every-ai-chat/id67379122
       </div>
     </div>
 
-    <!-- Feature 3: Private by design — IMAGE left, TEXT right -->
+    <!-- Feature 2: Private by design — IMAGE left, TEXT right -->
     <div class="py-16 animate-reveal flex flex-col min-[1200px]:flex-row items-center gap-5 min-[1200px]:gap-[50px]">
       <!-- Image card -->
       <div class="w-full max-w-[500px] min-[1200px]:max-w-none min-[1200px]:w-[450px] min-[1200px]:h-[350px] min-[1200px]:shrink-0 aspect-[9/7] min-[1200px]:aspect-auto rounded-[44px] overflow-hidden bg-[#15161a]/80">
