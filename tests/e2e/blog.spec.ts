@@ -16,7 +16,7 @@ test.describe('Blog', () => {
   });
 
   test('blog article has published date', async ({ page }) => {
-    await page.goto('/blog/ai-browsing-future');
+    await page.goto('/blog/multi-model-workflows');
     await expect(page.locator('time')).toBeVisible();
   });
 

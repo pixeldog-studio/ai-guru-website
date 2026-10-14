@@ -18,7 +18,7 @@ Paste your meeting notes into an AI model and get clean, actionable summaries wi
 
 ## 3. Research Synthesis
 
-Need to understand a complex topic quickly? AI with browsing capabilities can read multiple sources and give you a comprehensive summary in seconds.
+Need to understand a complex topic quickly? Paste in your notes, articles or reports and AI can condense them into a clear summary in seconds.
 
 ## 4. Code Review
 

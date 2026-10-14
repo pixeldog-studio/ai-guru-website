@@ -41,7 +41,7 @@ test.describe('Navigation', () => {
   });
 
   test('blog back link works', async ({ page }) => {
-    await page.goto('/blog/ai-browsing-future');
+    await page.goto('/blog/multi-model-workflows');
     await page.click('text=Back to Blog');
     await expect(page).toHaveURL(/\/blog/);
   });

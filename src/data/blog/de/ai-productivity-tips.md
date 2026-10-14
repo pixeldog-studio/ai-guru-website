@@ -18,7 +18,7 @@ Fügen Sie Ihre Meeting-Notizen in ein KI-Modell ein und erhalten Sie saubere, u
 
 ## 3. Recherche-Synthese
 
-KI mit Browsing-Fähigkeiten kann mehrere Quellen lesen und Ihnen in Sekunden eine umfassende Zusammenfassung liefern.
+Fügen Sie Notizen, Artikel oder Berichte ein, und KI fasst sie in Sekunden zu einer klaren Zusammenfassung zusammen.
 
 ## 4. Code-Review
 
