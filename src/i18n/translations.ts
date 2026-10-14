@@ -46,7 +46,7 @@ export const translations = {
       'Open any site inside Hustlrr and ask your AI about the page instantly',
     'features.multiModel.title': 'Multi-Model Access',
     'features.multiModel.description':
-      'Use GPT-5, Claude, Gemini, Grok, and more — all from one place.',
+      'Use GPT-6, Claude, Gemini, Grok, and more — all from one place.',
     'features.askAnything.title': 'Ask anything, do everything',
     'features.askAnything.description':
       'Chat, create, analyze, and solve tasks using text, images, videos, and documents.',
@@ -118,17 +118,17 @@ export const translations = {
     // Feature pages
     'featurePage.multiModel.title': 'All Top AI Models in One App',
     'featurePage.multiModel.description':
-      'Use GPT-5, Claude, Gemini, Grok, and more from a single subscription. Compare answers side by side and switch models mid-conversation.',
+      'Use GPT-6, Claude, Gemini, Grok, and more from a single subscription. Compare answers side by side and switch models mid-conversation.',
     'featurePage.multiModel.heroHeadline': 'Every AI model you need, one app',
     'featurePage.multiModel.heroLead':
-      'Stop paying for separate subscriptions. Hustlrr gives you GPT-5, Claude, Gemini, Grok, DeepSeek, and Mistral in one place.',
+      'Stop paying for separate subscriptions. Hustlrr gives you GPT-6, Claude, Gemini, Grok, DeepSeek, and Mistral in one place.',
     'featurePage.multiModel.problemTitle': 'The problem with single-model apps',
     'featurePage.multiModel.problemText':
-      'Each AI model has strengths. GPT-5 excels at creative writing. Claude is great at analysis. Gemini handles multimodal tasks. Why lock yourself into one?',
+      'Each AI model has strengths. GPT-6 excels at creative writing. Claude is great at analysis. Gemini handles multimodal tasks. Why lock yourself into one?',
     'featurePage.multiModel.howTitle': 'How it works',
     'featurePage.multiModel.howStep1Title': 'Pick your model',
     'featurePage.multiModel.howStep1Text':
-      'Choose from GPT-5, Claude, Gemini, Grok, DeepSeek, or Mistral before every message.',
+      'Choose from GPT-6, Claude, Gemini, Grok, DeepSeek, or Mistral before every message.',
     'featurePage.multiModel.howStep2Title': 'Switch mid-conversation',
     'featurePage.multiModel.howStep2Text':
       'Change models in the same thread to compare answers or get a second opinion.',
@@ -170,10 +170,10 @@ export const translations = {
       'Compare Hustlrr and ChatGPT side by side. See which AI chat app offers more models, web browsing, and privacy on iPhone.',
     'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — which AI chat app is better for iPhone?',
     'compare.vsChatGPT.heroLead':
-      'ChatGPT gives you one model. Hustlrr gives you GPT-5, Claude, Gemini, Grok, and more in a single app.',
+      'ChatGPT gives you one model. Hustlrr gives you GPT-6, Claude, Gemini, Grok, and more in a single app.',
     'compare.vsChatGPT.diff1Title': 'Multiple models vs one',
     'compare.vsChatGPT.diff1Text':
-      'ChatGPT locks you into OpenAI models. Hustlrr lets you switch between GPT-5, Claude, Gemini, and others in the same conversation.',
+      'ChatGPT locks you into OpenAI models. Hustlrr lets you switch between GPT-6, Claude, Gemini, and others in the same conversation.',
     'compare.vsChatGPT.diff2Title': 'Built-in web browsing',
     'compare.vsChatGPT.diff2Text':
       'Both apps can browse the web, but Hustlrr lets you open any page inside the app and chat about it with any AI model.',
@@ -182,8 +182,8 @@ export const translations = {
       'Hustlrr stores conversations in your encrypted iCloud. No server-side storage. No training on your data.',
     'compare.vsChatGPT.verdictText':
       'If you only need GPT, ChatGPT works fine. If you want the freedom to use multiple AI models, browse the web with AI, and keep your data private, Hustlrr is the better choice.',
-    'compare.vsChatGPT.faq1Question': 'Can I use GPT-5 in Hustlrr?',
-    'compare.vsChatGPT.faq1Answer': 'Yes. Hustlrr includes GPT-5 alongside Claude, Gemini, Grok, and other leading models.',
+    'compare.vsChatGPT.faq1Question': 'Can I use GPT-6 in Hustlrr?',
+    'compare.vsChatGPT.faq1Answer': 'Yes. Hustlrr includes GPT-6 alongside Claude, Gemini, Grok, and other leading models.',
     'compare.vsChatGPT.faq2Question': 'Is Hustlrr free?',
     'compare.vsChatGPT.faq2Answer': 'Hustlrr offers a free tier. Premium plans unlock higher usage limits and all models.',
     'compare.vsChatGPT.faq3Question': 'Does Hustlrr work on Mac?',
@@ -194,10 +194,10 @@ export const translations = {
       'Compare Hustlrr and the Claude app. See why a multi-model AI chat app gives you more flexibility on iPhone.',
     'compare.vsClaude.heroHeadline': 'Hustlrr vs Claude — why limit yourself to one AI model?',
     'compare.vsClaude.heroLead':
-      'The Claude app gives you Anthropic\'s models. Hustlrr gives you Claude plus GPT-5, Gemini, Grok, and more.',
+      'The Claude app gives you Anthropic\'s models. Hustlrr gives you Claude plus GPT-6, Gemini, Grok, and more.',
     'compare.vsClaude.diff1Title': 'Claude plus everything else',
     'compare.vsClaude.diff1Text':
-      'Love Claude? Use it inside Hustlrr. But when you need a different perspective, switch to GPT-5, Gemini, or Grok without leaving the app.',
+      'Love Claude? Use it inside Hustlrr. But when you need a different perspective, switch to GPT-6, Gemini, or Grok without leaving the app.',
     'compare.vsClaude.diff2Title': 'Web browsing built in',
     'compare.vsClaude.diff2Text':
       'The Claude app does not include a built-in browser. Hustlrr lets you open any page and chat about it with any model.',
@@ -205,9 +205,9 @@ export const translations = {
     'compare.vsClaude.diff3Text':
       'Both apps respect privacy, but Hustlrr goes further — conversations never touch our servers. Everything stays in your encrypted iCloud.',
     'compare.vsClaude.verdictText':
-      'If Claude is the only model you need, the official Claude app is a great choice. If you want Claude and GPT-5, Gemini, Grok, and web browsing in one app, Hustlrr gives you that flexibility.',
+      'If Claude is the only model you need, the official Claude app is a great choice. If you want Claude and GPT-6, Gemini, Grok, and web browsing in one app, Hustlrr gives you that flexibility.',
     'compare.vsClaude.faq1Question': 'Can I use Claude in Hustlrr?',
-    'compare.vsClaude.faq1Answer': 'Yes. Hustlrr includes Claude alongside GPT-5, Gemini, Grok, and other models.',
+    'compare.vsClaude.faq1Answer': 'Yes. Hustlrr includes Claude alongside GPT-6, Gemini, Grok, and other models.',
     'compare.vsClaude.faq2Question': 'Which app has better privacy?',
     'compare.vsClaude.faq2Answer': 'Both take privacy seriously. Hustlrr stores everything in your encrypted iCloud with zero server-side storage.',
     'compare.vsClaude.faq3Question': 'Is Hustlrr available in Europe?',
@@ -257,7 +257,7 @@ export const translations = {
       'Öffne jede Seite in Hustlrr und frage deine KI sofort über die Seite',
     'features.multiModel.title': 'Multi-Modell-Zugang',
     'features.multiModel.description':
-      'Nutze GPT-5, Claude, Gemini, Grok und mehr — alles an einem Ort.',
+      'Nutze GPT-6, Claude, Gemini, Grok und mehr — alles an einem Ort.',
     'features.askAnything.title': 'Frage alles, erledige alles',
     'features.askAnything.description':
       'Chatte, erstelle, analysiere und löse Aufgaben mit Text, Bildern, Videos und Dokumenten.',
@@ -330,17 +330,17 @@ export const translations = {
     // Feature pages
     'featurePage.multiModel.title': 'Alle Top-KI-Modelle in einer App',
     'featurePage.multiModel.description':
-      'Nutze GPT-5, Claude, Gemini, Grok und mehr mit einem einzigen Abo. Vergleiche Antworten und wechsle Modelle mitten im Gespräch.',
+      'Nutze GPT-6, Claude, Gemini, Grok und mehr mit einem einzigen Abo. Vergleiche Antworten und wechsle Modelle mitten im Gespräch.',
     'featurePage.multiModel.heroHeadline': 'Jedes KI-Modell, das du brauchst, in einer App',
     'featurePage.multiModel.heroLead':
-      'Schluss mit separaten Abos. Hustlrr gibt dir GPT-5, Claude, Gemini, Grok, DeepSeek und Mistral an einem Ort.',
+      'Schluss mit separaten Abos. Hustlrr gibt dir GPT-6, Claude, Gemini, Grok, DeepSeek und Mistral an einem Ort.',
     'featurePage.multiModel.problemTitle': 'Das Problem mit Einzel-Modell-Apps',
     'featurePage.multiModel.problemText':
-      'Jedes KI-Modell hat Stärken. GPT-5 glänzt beim kreativen Schreiben. Claude bei der Analyse. Gemini bei multimodalen Aufgaben. Warum sich auf eines festlegen?',
+      'Jedes KI-Modell hat Stärken. GPT-6 glänzt beim kreativen Schreiben. Claude bei der Analyse. Gemini bei multimodalen Aufgaben. Warum sich auf eines festlegen?',
     'featurePage.multiModel.howTitle': 'So funktioniert es',
     'featurePage.multiModel.howStep1Title': 'Modell wählen',
     'featurePage.multiModel.howStep1Text':
-      'Wähle vor jeder Nachricht zwischen GPT-5, Claude, Gemini, Grok, DeepSeek oder Mistral.',
+      'Wähle vor jeder Nachricht zwischen GPT-6, Claude, Gemini, Grok, DeepSeek oder Mistral.',
     'featurePage.multiModel.howStep2Title': 'Im Gespräch wechseln',
     'featurePage.multiModel.howStep2Text':
       'Wechsle das Modell im selben Thread, um Antworten zu vergleichen oder eine zweite Meinung zu erhalten.',
@@ -382,10 +382,10 @@ export const translations = {
       'Vergleiche Hustlrr und ChatGPT Seite an Seite. Welche KI-Chat-App bietet mehr Modelle, Web-Browsing und Datenschutz auf dem iPhone?',
     'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — welche KI-Chat-App ist besser fürs iPhone?',
     'compare.vsChatGPT.heroLead':
-      'ChatGPT bietet dir ein Modell. Hustlrr gibt dir GPT-5, Claude, Gemini, Grok und mehr in einer App.',
+      'ChatGPT bietet dir ein Modell. Hustlrr gibt dir GPT-6, Claude, Gemini, Grok und mehr in einer App.',
     'compare.vsChatGPT.diff1Title': 'Mehrere Modelle statt einem',
     'compare.vsChatGPT.diff1Text':
-      'ChatGPT beschränkt dich auf OpenAI-Modelle. Hustlrr lässt dich zwischen GPT-5, Claude, Gemini und anderen im selben Gespräch wechseln.',
+      'ChatGPT beschränkt dich auf OpenAI-Modelle. Hustlrr lässt dich zwischen GPT-6, Claude, Gemini und anderen im selben Gespräch wechseln.',
     'compare.vsChatGPT.diff2Title': 'Integriertes Web-Browsing',
     'compare.vsChatGPT.diff2Text':
       'Beide Apps können im Web surfen, aber Hustlrr öffnet jede Seite direkt in der App — und du chattest mit jedem KI-Modell darüber.',
@@ -394,8 +394,8 @@ export const translations = {
       'Hustlrr speichert Gespräche in deinem verschlüsselten iCloud. Kein serverseitiger Speicher. Kein Training mit deinen Daten.',
     'compare.vsChatGPT.verdictText':
       'Wenn du nur GPT brauchst, funktioniert ChatGPT gut. Wenn du mehrere KI-Modelle nutzen, mit KI im Web browsen und deine Daten schützen willst, ist Hustlrr die bessere Wahl.',
-    'compare.vsChatGPT.faq1Question': 'Kann ich GPT-5 in Hustlrr nutzen?',
-    'compare.vsChatGPT.faq1Answer': 'Ja. Hustlrr bietet GPT-5 neben Claude, Gemini, Grok und weiteren Modellen.',
+    'compare.vsChatGPT.faq1Question': 'Kann ich GPT-6 in Hustlrr nutzen?',
+    'compare.vsChatGPT.faq1Answer': 'Ja. Hustlrr bietet GPT-6 neben Claude, Gemini, Grok und weiteren Modellen.',
     'compare.vsChatGPT.faq2Question': 'Ist Hustlrr kostenlos?',
     'compare.vsChatGPT.faq2Answer': 'Hustlrr bietet eine kostenlose Stufe. Premium-Pläne schalten höhere Limits und alle Modelle frei.',
     'compare.vsChatGPT.faq3Question': 'Funktioniert Hustlrr auf dem Mac?',
@@ -406,10 +406,10 @@ export const translations = {
       'Vergleiche Hustlrr und die Claude-App. Warum eine Multi-Modell-KI-App dir mehr Flexibilität auf dem iPhone bietet.',
     'compare.vsClaude.heroHeadline': 'Hustlrr vs Claude — warum sich auf ein KI-Modell beschränken?',
     'compare.vsClaude.heroLead':
-      'Die Claude-App gibt dir Anthropics Modelle. Hustlrr gibt dir Claude plus GPT-5, Gemini, Grok und mehr.',
+      'Die Claude-App gibt dir Anthropics Modelle. Hustlrr gibt dir Claude plus GPT-6, Gemini, Grok und mehr.',
     'compare.vsClaude.diff1Title': 'Claude plus alles andere',
     'compare.vsClaude.diff1Text':
-      'Du liebst Claude? Nutze es in Hustlrr. Wenn du eine andere Perspektive brauchst, wechsle zu GPT-5, Gemini oder Grok, ohne die App zu verlassen.',
+      'Du liebst Claude? Nutze es in Hustlrr. Wenn du eine andere Perspektive brauchst, wechsle zu GPT-6, Gemini oder Grok, ohne die App zu verlassen.',
     'compare.vsClaude.diff2Title': 'Web-Browsing integriert',
     'compare.vsClaude.diff2Text':
       'Die Claude-App hat keinen integrierten Browser. Hustlrr öffnet jede Seite und du chattest mit jedem Modell darüber.',
@@ -417,9 +417,9 @@ export const translations = {
     'compare.vsClaude.diff3Text':
       'Beide Apps respektieren Datenschutz, aber Hustlrr geht weiter — Gespräche berühren nie unsere Server. Alles bleibt in deinem verschlüsselten iCloud.',
     'compare.vsClaude.verdictText':
-      'Wenn Claude das einzige Modell ist, das du brauchst, ist die offizielle Claude-App eine gute Wahl. Wenn du Claude und GPT-5, Gemini, Grok und Web-Browsing in einer App willst, gibt Hustlrr dir diese Flexibilität.',
+      'Wenn Claude das einzige Modell ist, das du brauchst, ist die offizielle Claude-App eine gute Wahl. Wenn du Claude und GPT-6, Gemini, Grok und Web-Browsing in einer App willst, gibt Hustlrr dir diese Flexibilität.',
     'compare.vsClaude.faq1Question': 'Kann ich Claude in Hustlrr nutzen?',
-    'compare.vsClaude.faq1Answer': 'Ja. Hustlrr bietet Claude neben GPT-5, Gemini, Grok und weiteren Modellen.',
+    'compare.vsClaude.faq1Answer': 'Ja. Hustlrr bietet Claude neben GPT-6, Gemini, Grok und weiteren Modellen.',
     'compare.vsClaude.faq2Question': 'Welche App hat besseren Datenschutz?',
     'compare.vsClaude.faq2Answer': 'Beide nehmen Datenschutz ernst. Hustlrr speichert alles in deinem verschlüsselten iCloud ohne serverseitige Speicherung.',
     'compare.vsClaude.faq3Question': 'Ist Hustlrr in Europa verfügbar?',

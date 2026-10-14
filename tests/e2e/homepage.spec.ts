@@ -47,9 +47,9 @@ test.describe('Homepage', () => {
   });
 
   test('model badges are shown', async ({ page }) => {
-    await expect(page.getByText('GPT 5.1', { exact: true })).toBeVisible();
-    await expect(page.getByText('Claude', { exact: true })).toBeVisible();
-    await expect(page.getByText('Gemini 3', { exact: true })).toBeVisible();
-    await expect(page.getByText('Grok', { exact: true })).toBeVisible();
+    await expect(page.getByText('GPT-6', { exact: true })).toBeVisible();
+    await expect(page.getByText('Claude Opus 5.5', { exact: true })).toBeVisible();
+    await expect(page.getByText('Gemini 4', { exact: true })).toBeVisible();
+    await expect(page.getByText('Grok 4.7', { exact: true })).toBeVisible();
   });
 });

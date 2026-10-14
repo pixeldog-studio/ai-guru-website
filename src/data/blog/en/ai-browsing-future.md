@@ -39,6 +39,6 @@ AI browsing is particularly powerful for:
 
 ## The Hustlrr Advantage
 
-Hustlrr gives you access to multiple AI models with browsing capabilities. Whether you prefer GPT-5's comprehensive analysis or Claude's careful reasoning, you can browse the web with the AI that suits your needs best.
+Hustlrr gives you access to multiple AI models with browsing capabilities. Whether you prefer GPT-6's comprehensive analysis or Claude's careful reasoning, you can browse the web with the AI that suits your needs best.
 
 The future of search is conversational, intelligent, and always up to date.
