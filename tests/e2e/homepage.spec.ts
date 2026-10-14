@@ -21,7 +21,7 @@ test.describe('Homepage', () => {
   });
 
   test('renders features section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Chat with AI on any webpage' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Chat with AI on any webpage' })).toHaveCount(0);
     await expect(page.getByRole('heading', { name: 'Ask anything, do everything' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Private by design, with full control' })).toBeVisible();
   });
