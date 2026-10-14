@@ -13,10 +13,8 @@ export const translations = {
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.chat': 'Chat',
-    'nav.browse': 'Browse',
 
     // CTAs
-    'cta.chatAndBrowse': 'Chat & Browse',
     'cta.getStarted': 'Get Started',
     'cta.learnMore': 'Learn More',
     'cta.readMore': 'Read More',
@@ -28,10 +26,10 @@ export const translations = {
     'cta.getGuide': 'Get guide',
 
     // Hero
-    'hero.tagline': 'Chat & Browse with the Best AI Models',
-    'hero.title': 'Chat and browse with the best AI models',
+    'hero.tagline': 'Chat with the Best AI Models',
+    'hero.title': 'Chat with the best AI models',
     'hero.subtitle':
-      'Choose your AI model, ask anything, and get answers about any page you visit',
+      'Choose your AI model, ask anything, and compare how each one answers',
 
     // Models
     'models.title': 'All the top AI models in one app',
@@ -41,9 +39,6 @@ export const translations = {
 
     // Features
     'features.title': 'Why Hustlrr?',
-    'features.browsing.title': 'Chat with AI on any webpage',
-    'features.browsing.description':
-      'Open any site inside Hustlrr and ask your AI about the page instantly',
     'features.multiModel.title': 'Multi-Model Access',
     'features.multiModel.description':
       'Use GPT-6, Claude, Gemini, Grok, and more — all from one place.',
@@ -136,26 +131,6 @@ export const translations = {
     'featurePage.multiModel.howStep3Text':
       'No separate accounts. No separate billing. Everything is included in one Hustlrr plan.',
 
-    'featurePage.webBrowsing.title': 'Chat with AI on Any Webpage',
-    'featurePage.webBrowsing.description':
-      'Browse any website inside Hustlrr and ask your AI to summarize, explain, or answer questions about the page you are viewing.',
-    'featurePage.webBrowsing.heroHeadline': 'Browse the web with AI by your side',
-    'featurePage.webBrowsing.heroLead':
-      'Open any webpage inside Hustlrr. Ask questions, get summaries, and extract information without switching apps.',
-    'featurePage.webBrowsing.problemTitle': 'Copy-paste is not a workflow',
-    'featurePage.webBrowsing.problemText':
-      'Reading a long article? Researching a topic? Copying text into a separate AI chat breaks your flow. Hustlrr puts the AI right next to the page.',
-    'featurePage.webBrowsing.howTitle': 'How it works',
-    'featurePage.webBrowsing.howStep1Title': 'Open any URL',
-    'featurePage.webBrowsing.howStep1Text':
-      'Type or paste a URL into Hustlrr\'s built-in browser. The page loads directly inside the app.',
-    'featurePage.webBrowsing.howStep2Title': 'Ask about the page',
-    'featurePage.webBrowsing.howStep2Text':
-      'The AI reads the page content and can summarize it, answer questions, extract data, or translate it.',
-    'featurePage.webBrowsing.howStep3Title': 'Stay in context',
-    'featurePage.webBrowsing.howStep3Text':
-      'Navigate between pages while your AI conversation follows along. No re-pasting needed.',
-
     // Comparison pages
     'compare.table.caption': 'Hustlrr vs {competitor} feature comparison',
     'compare.table.feature': 'Feature',
@@ -167,21 +142,21 @@ export const translations = {
 
     'compare.vsChatGPT.title': 'Hustlrr vs ChatGPT',
     'compare.vsChatGPT.description':
-      'Compare Hustlrr and ChatGPT side by side. See which AI chat app offers more models, web browsing, and privacy on iPhone.',
+      'Compare Hustlrr and ChatGPT side by side. See which AI chat app offers more models and better privacy on iPhone.',
     'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — which AI chat app is better for iPhone?',
     'compare.vsChatGPT.heroLead':
       'ChatGPT gives you one model. Hustlrr gives you GPT-6, Claude, Gemini, Grok, and more in a single app.',
     'compare.vsChatGPT.diff1Title': 'Multiple models vs one',
     'compare.vsChatGPT.diff1Text':
       'ChatGPT locks you into OpenAI models. Hustlrr lets you switch between GPT-6, Claude, Gemini, and others in the same conversation.',
-    'compare.vsChatGPT.diff2Title': 'Built-in web browsing',
+    'compare.vsChatGPT.diff2Title': 'One subscription, every model',
     'compare.vsChatGPT.diff2Text':
-      'Both apps can browse the web, but Hustlrr lets you open any page inside the app and chat about it with any AI model.',
+      'Instead of paying for separate AI subscriptions, one Hustlrr plan gives you GPT-6, Claude, Gemini, Grok and more.',
     'compare.vsChatGPT.diff3Title': 'Privacy-first',
     'compare.vsChatGPT.diff3Text':
       'Hustlrr stores conversations in your encrypted iCloud. No server-side storage. No training on your data.',
     'compare.vsChatGPT.verdictText':
-      'If you only need GPT, ChatGPT works fine. If you want the freedom to use multiple AI models, browse the web with AI, and keep your data private, Hustlrr is the better choice.',
+      'If you only need GPT, ChatGPT works fine. If you want the freedom to use multiple AI models and keep your data private, Hustlrr is the better choice.',
     'compare.vsChatGPT.faq1Question': 'Can I use GPT-6 in Hustlrr?',
     'compare.vsChatGPT.faq1Answer': 'Yes. Hustlrr includes GPT-6 alongside Claude, Gemini, Grok, and other leading models.',
     'compare.vsChatGPT.faq2Question': 'Is Hustlrr free?',
@@ -198,14 +173,14 @@ export const translations = {
     'compare.vsClaude.diff1Title': 'Claude plus everything else',
     'compare.vsClaude.diff1Text':
       'Love Claude? Use it inside Hustlrr. But when you need a different perspective, switch to GPT-6, Gemini, or Grok without leaving the app.',
-    'compare.vsClaude.diff2Title': 'Web browsing built in',
+    'compare.vsClaude.diff2Title': 'One subscription, every model',
     'compare.vsClaude.diff2Text':
-      'The Claude app does not include a built-in browser. Hustlrr lets you open any page and chat about it with any model.',
+      'Instead of paying for separate AI subscriptions, one Hustlrr plan gives you Claude, GPT-6, Gemini, Grok and more.',
     'compare.vsClaude.diff3Title': 'iCloud-only storage',
     'compare.vsClaude.diff3Text':
       'Both apps respect privacy, but Hustlrr goes further — conversations never touch our servers. Everything stays in your encrypted iCloud.',
     'compare.vsClaude.verdictText':
-      'If Claude is the only model you need, the official Claude app is a great choice. If you want Claude and GPT-6, Gemini, Grok, and web browsing in one app, Hustlrr gives you that flexibility.',
+      'If Claude is the only model you need, the official Claude app is a great choice. If you want Claude, GPT-6, Gemini, and Grok in one app, Hustlrr gives you that flexibility.',
     'compare.vsClaude.faq1Question': 'Can I use Claude in Hustlrr?',
     'compare.vsClaude.faq1Answer': 'Yes. Hustlrr includes Claude alongside GPT-6, Gemini, Grok, and other models.',
     'compare.vsClaude.faq2Question': 'Which app has better privacy?',
@@ -224,10 +199,8 @@ export const translations = {
     'nav.home': 'Startseite',
     'nav.blog': 'Blog',
     'nav.chat': 'Chat',
-    'nav.browse': 'Browse',
 
     // CTAs
-    'cta.chatAndBrowse': 'Chat & Browse',
     'cta.getStarted': 'Jetzt starten',
     'cta.learnMore': 'Mehr erfahren',
     'cta.readMore': 'Weiterlesen',
@@ -239,10 +212,10 @@ export const translations = {
     'cta.getGuide': 'Guide holen',
 
     // Hero
-    'hero.tagline': 'Chatten & Browsen mit den besten KI-Modellen',
-    'hero.title': 'Chatten und browsen mit den besten KI-Modellen',
+    'hero.tagline': 'Chatte mit den besten KI-Modellen',
+    'hero.title': 'Chatte mit den besten KI-Modellen',
     'hero.subtitle':
-      'Wähle dein KI-Modell, frage alles und erhalte Antworten zu jeder Seite, die du besuchst',
+      'Wähle dein KI-Modell, frage alles und vergleiche, wie jedes antwortet',
 
     // Models
     'models.title': 'Alle Top-KI-Modelle in einer App',
@@ -252,9 +225,6 @@ export const translations = {
 
     // Features
     'features.title': 'Warum Hustlrr?',
-    'features.browsing.title': 'Chatte mit KI auf jeder Webseite',
-    'features.browsing.description':
-      'Öffne jede Seite in Hustlrr und frage deine KI sofort über die Seite',
     'features.multiModel.title': 'Multi-Modell-Zugang',
     'features.multiModel.description':
       'Nutze GPT-6, Claude, Gemini, Grok und mehr — alles an einem Ort.',
@@ -348,26 +318,6 @@ export const translations = {
     'featurePage.multiModel.howStep3Text':
       'Keine separaten Konten. Keine getrennte Abrechnung. Alles in einem Hustlrr-Plan.',
 
-    'featurePage.webBrowsing.title': 'Chatte mit KI auf jeder Webseite',
-    'featurePage.webBrowsing.description':
-      'Öffne jede Website in Hustlrr und frage deine KI, die Seite zusammenzufassen, zu erklären oder Fragen dazu zu beantworten.',
-    'featurePage.webBrowsing.heroHeadline': 'Surfe mit KI an deiner Seite',
-    'featurePage.webBrowsing.heroLead':
-      'Öffne jede Webseite in Hustlrr. Stelle Fragen, erhalte Zusammenfassungen und extrahiere Informationen ohne App-Wechsel.',
-    'featurePage.webBrowsing.problemTitle': 'Copy-Paste ist kein Workflow',
-    'featurePage.webBrowsing.problemText':
-      'Einen langen Artikel lesen? Ein Thema recherchieren? Text in einen separaten KI-Chat kopieren unterbricht deinen Flow. Hustlrr bringt die KI direkt auf die Seite.',
-    'featurePage.webBrowsing.howTitle': 'So funktioniert es',
-    'featurePage.webBrowsing.howStep1Title': 'URL öffnen',
-    'featurePage.webBrowsing.howStep1Text':
-      'Tippe oder füge eine URL in Hustlrrs integrierten Browser ein. Die Seite wird direkt in der App geladen.',
-    'featurePage.webBrowsing.howStep2Title': 'Über die Seite fragen',
-    'featurePage.webBrowsing.howStep2Text':
-      'Die KI liest den Seiteninhalt und kann zusammenfassen, Fragen beantworten, Daten extrahieren oder übersetzen.',
-    'featurePage.webBrowsing.howStep3Title': 'Im Kontext bleiben',
-    'featurePage.webBrowsing.howStep3Text':
-      'Navigiere zwischen Seiten, während dein KI-Gespräch folgt. Kein erneutes Einfügen nötig.',
-
     // Comparison pages
     'compare.table.caption': 'Hustlrr vs {competitor} Funktionsvergleich',
     'compare.table.feature': 'Funktion',
@@ -379,21 +329,21 @@ export const translations = {
 
     'compare.vsChatGPT.title': 'Hustlrr vs ChatGPT',
     'compare.vsChatGPT.description':
-      'Vergleiche Hustlrr und ChatGPT Seite an Seite. Welche KI-Chat-App bietet mehr Modelle, Web-Browsing und Datenschutz auf dem iPhone?',
+      'Vergleiche Hustlrr und ChatGPT Seite an Seite. Welche KI-Chat-App bietet mehr Modelle und besseren Datenschutz auf dem iPhone?',
     'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — welche KI-Chat-App ist besser fürs iPhone?',
     'compare.vsChatGPT.heroLead':
       'ChatGPT bietet dir ein Modell. Hustlrr gibt dir GPT-6, Claude, Gemini, Grok und mehr in einer App.',
     'compare.vsChatGPT.diff1Title': 'Mehrere Modelle statt einem',
     'compare.vsChatGPT.diff1Text':
       'ChatGPT beschränkt dich auf OpenAI-Modelle. Hustlrr lässt dich zwischen GPT-6, Claude, Gemini und anderen im selben Gespräch wechseln.',
-    'compare.vsChatGPT.diff2Title': 'Integriertes Web-Browsing',
+    'compare.vsChatGPT.diff2Title': 'Ein Abo, alle Modelle',
     'compare.vsChatGPT.diff2Text':
-      'Beide Apps können im Web surfen, aber Hustlrr öffnet jede Seite direkt in der App — und du chattest mit jedem KI-Modell darüber.',
+      'Statt separate KI-Abos zu bezahlen, bekommst du mit einem Hustlrr-Plan GPT-6, Claude, Gemini, Grok und mehr.',
     'compare.vsChatGPT.diff3Title': 'Privacy-first',
     'compare.vsChatGPT.diff3Text':
       'Hustlrr speichert Gespräche in deinem verschlüsselten iCloud. Kein serverseitiger Speicher. Kein Training mit deinen Daten.',
     'compare.vsChatGPT.verdictText':
-      'Wenn du nur GPT brauchst, funktioniert ChatGPT gut. Wenn du mehrere KI-Modelle nutzen, mit KI im Web browsen und deine Daten schützen willst, ist Hustlrr die bessere Wahl.',
+      'Wenn du nur GPT brauchst, funktioniert ChatGPT gut. Wenn du mehrere KI-Modelle nutzen und deine Daten schützen willst, ist Hustlrr die bessere Wahl.',
     'compare.vsChatGPT.faq1Question': 'Kann ich GPT-6 in Hustlrr nutzen?',
     'compare.vsChatGPT.faq1Answer': 'Ja. Hustlrr bietet GPT-6 neben Claude, Gemini, Grok und weiteren Modellen.',
     'compare.vsChatGPT.faq2Question': 'Ist Hustlrr kostenlos?',
@@ -410,14 +360,14 @@ export const translations = {
     'compare.vsClaude.diff1Title': 'Claude plus alles andere',
     'compare.vsClaude.diff1Text':
       'Du liebst Claude? Nutze es in Hustlrr. Wenn du eine andere Perspektive brauchst, wechsle zu GPT-6, Gemini oder Grok, ohne die App zu verlassen.',
-    'compare.vsClaude.diff2Title': 'Web-Browsing integriert',
+    'compare.vsClaude.diff2Title': 'Ein Abo, alle Modelle',
     'compare.vsClaude.diff2Text':
-      'Die Claude-App hat keinen integrierten Browser. Hustlrr öffnet jede Seite und du chattest mit jedem Modell darüber.',
+      'Statt separate KI-Abos zu bezahlen, bekommst du mit einem Hustlrr-Plan Claude, GPT-6, Gemini, Grok und mehr.',
     'compare.vsClaude.diff3Title': 'Nur iCloud-Speicher',
     'compare.vsClaude.diff3Text':
       'Beide Apps respektieren Datenschutz, aber Hustlrr geht weiter — Gespräche berühren nie unsere Server. Alles bleibt in deinem verschlüsselten iCloud.',
     'compare.vsClaude.verdictText':
-      'Wenn Claude das einzige Modell ist, das du brauchst, ist die offizielle Claude-App eine gute Wahl. Wenn du Claude und GPT-6, Gemini, Grok und Web-Browsing in einer App willst, gibt Hustlrr dir diese Flexibilität.',
+      'Wenn Claude das einzige Modell ist, das du brauchst, ist die offizielle Claude-App eine gute Wahl. Wenn du Claude, GPT-6, Gemini und Grok in einer App willst, gibt Hustlrr dir diese Flexibilität.',
     'compare.vsClaude.faq1Question': 'Kann ich Claude in Hustlrr nutzen?',
     'compare.vsClaude.faq1Answer': 'Ja. Hustlrr bietet Claude neben GPT-6, Gemini, Grok und weiteren Modellen.',
     'compare.vsClaude.faq2Question': 'Welche App hat besseren Datenschutz?',

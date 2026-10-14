@@ -6,7 +6,7 @@ test.describe('Homepage', () => {
   });
 
   test('renders hero section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Chat and browse with the best AI models', level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Chat with the best AI models', level: 1 })).toBeVisible();
     await expect(page.locator('text=Get Hustlrr for free').first()).toBeVisible();
   });
 

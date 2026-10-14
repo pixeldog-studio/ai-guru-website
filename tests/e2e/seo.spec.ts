@@ -40,7 +40,7 @@ test.describe('SEO', () => {
   });
 
   test('blog article has structured data', async ({ page }) => {
-    await page.goto('/blog/ai-browsing-future');
+    await page.goto('/blog/multi-model-workflows');
 
     const jsonLd = page.locator('script[type="application/ld+json"]');
     await expect(jsonLd).toHaveCount(1);
