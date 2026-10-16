@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '@i18n/translations';
 import { useTranslations } from '@i18n/utils';
+import { APP_STORE_URL } from '@lib/urls';
 
 interface Props {
   lang: Lang;
@@ -8,7 +9,6 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
-const appStoreUrl = 'https://apps.apple.com/app/hustlrr-every-ai-chat/id6737912223';
 ---
 
 <section class="relative px-5 -mt-16" style="height: min(888px, 100vh); overflow-x: clip; overflow-y: visible;">
@@ -54,7 +54,7 @@ const appStoreUrl = 'https://apps.apple.com/app/hustlrr-every-ai-chat/id67379122
     <!-- CTA Button - large white pill -->
     <div class="flex justify-center mb-8 animate-hero">
       <a
-        href={appStoreUrl}
+        href={APP_STORE_URL}
         target="_blank"
         rel="noopener"
         class="inline-flex items-center gap-4 bg-white text-bg-primary font-bold text-[22px] pl-10 pr-6 py-6 rounded-[var(--radius-cta)] hover:bg-gray-100 transition-colors duration-200"

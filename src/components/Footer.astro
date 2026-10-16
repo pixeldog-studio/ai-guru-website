@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '@i18n/translations';
 import { useTranslations, getLocalizedPath } from '@i18n/utils';
+import { APP_STORE_URL } from '@lib/urls';
 import { getCollection } from 'astro:content';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
@@ -11,7 +12,6 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
-const appStoreUrl = 'https://apps.apple.com/app/hustlrr-every-ai-chat/id6737912223';
 
 const posts = (await getCollection('blog', ({ data }) => {
   return data.lang === lang && !data.draft;
@@ -104,7 +104,7 @@ const blogLinks = [
       <!-- App Store badges (dark style matching live site) -->
       <div class="flex items-center gap-2.5">
         <a
-          href={appStoreUrl}
+          href={APP_STORE_URL}
           target="_blank"
           rel="noopener"
           class="inline-flex items-center justify-center rounded-lg overflow-hidden hover:opacity-80 transition-opacity border border-white/20"
@@ -113,7 +113,7 @@ const blogLinks = [
           <img src="/images/Group@2x.png" alt="Download on the App Store" class="h-[28px] w-auto" style="filter: invert(1);" />
         </a>
         <a
-          href={appStoreUrl}
+          href={APP_STORE_URL}
           target="_blank"
           rel="noopener"
           class="inline-flex items-center justify-center rounded-lg overflow-hidden hover:opacity-80 transition-opacity border border-white/20"
