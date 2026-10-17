@@ -2,22 +2,32 @@
   "name": "hustlrr-website",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "test:all": "vitest run && playwright test"
+    "test:all": "vitest run && playwright test",
+    "verify": "astro check && vitest run && astro build",
+    "verify:full": "npm run verify && playwright test"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
-    "@playwright/test": "^1.58.2",
     "@tailwindcss/vite": "^4.2.0",
     "astro": "^5.17.1",
-    "tailwindcss": "^4.2.0",
+    "tailwindcss": "^4.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@playwright/test": "^1.58.2",
+    "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   }
 }

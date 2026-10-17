@@ -5,42 +5,35 @@ description: Verify responsive layout at mobile, tablet, and desktop breakpoints
 
 # Responsive Layout Verification
 
-Check the current page at all 3 breakpoints and report any layout issues.
+Check the changed page(s) at all three breakpoints and report layout issues. Default to `/` and `/de` if no page was given in $ARGUMENTS.
 
 ## Steps
 
-1. **Start the preview server** if not already running using `preview_start` with the "dev" server name
-2. **Take screenshots at 3 viewports**:
-   - Mobile: resize to 375x812, take screenshot
-   - Tablet: resize to 768x1024, take screenshot
-   - Desktop: resize to 1280x800, take screenshot
-3. **Check the accessibility snapshot** at each viewport for:
-   - Text that overflows or gets cut off
-   - Elements that overlap or stack incorrectly
-   - Missing content that should be visible
-   - Navigation that doesn't collapse properly on mobile
-4. **Inspect key CSS properties** using `preview_inspect`:
-   - Check container elements have proper `max-width` and padding
-   - Verify flex/grid layouts wrap correctly
-   - Check font sizes are readable at each breakpoint (min 14px on mobile)
-   - Verify tap targets are at least 48x48px on mobile
-5. **Report findings**:
-   - List any issues found with the specific viewport and element
-   - If issues are found, fix them immediately in the source code
-   - Re-screenshot to verify the fix
+1. Start `npm run dev` (port 4321) unless a server is already running for this checkout.
+2. With your browser tool (Playwright MCP, Chrome DevTools MCP, or the harness preview), screenshot each page at:
+   - Mobile: 375x812
+   - Tablet: 768x1024
+   - Desktop: 1280x800
+3. At each size, check:
+   - No horizontal scroll: `document.documentElement.scrollWidth <= window.innerWidth`
+   - No text clipped or overflowing, no overlapping elements
+   - Header (logo + Features/Blog links) fits on one row at 375px
+   - Images stay inside their containers
+   - Body text is at least 14px on mobile; tap targets at least 44x44px
+4. Check the German version of the same page too. German strings run longer and are the usual cause of overflow.
+5. Report issues with viewport, page, and element. Fix them in source, then re-screenshot to confirm.
 
-## Key Breakpoints
+## Breakpoints (Tailwind defaults)
 
-- Mobile: max-width 639px
-- Tablet: 640px - 1023px
-- Desktop: 1024px+
+- Mobile: < 640px
+- Tablet: 640px to 1023px (`sm:`/`md:`)
+- Desktop: 1024px+ (`lg:`)
 
-## Common Issues to Check
+Content width is capped by `--max-w-content` (960px) and `--max-w-article` (768px) in `src/styles/global.css`.
 
-- Header hamburger menu works on mobile
-- Images don't overflow containers
-- Text remains readable (not too small, not too large)
-- Horizontal scrolling doesn't appear
-- Footer columns stack on mobile
-- Blog cards grid adjusts from 3 cols → 2 cols → 1 col
-- Hero section text wraps properly
+## Usual suspects
+
+- Blog grid: 1 column on mobile, 2 from `md:`
+- Footer columns stacking on mobile
+- Comparison tables on `/compare/*` overflowing on mobile
+- Long German headlines in the hero and feature cards

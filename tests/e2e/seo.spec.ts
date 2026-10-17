@@ -62,7 +62,7 @@ test.describe('SEO', () => {
 
   test('sitemap exists', async ({ page }) => {
     const response = await page.goto('/sitemap-index.xml');
-    expect(response?.status()).toBeLessThanOrEqual(404);
+    expect(response?.status()).toBe(200);
   });
 
   test('RSS feed exists', async ({ page }) => {

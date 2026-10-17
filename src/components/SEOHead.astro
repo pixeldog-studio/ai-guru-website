@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '@i18n/translations';
-import { getAlternatePath, getAlternateLang } from '@i18n/utils';
+import { getAlternatePath } from '@i18n/utils';
 
 interface Props {
   title: string;
@@ -29,7 +29,6 @@ const {
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.hustlrr.ai';
 const currentPath = canonicalPath ?? Astro.url.pathname;
 const canonicalUrl = `${site}${currentPath}`;
-const altLang = getAlternateLang(lang);
 const altPath = getAlternatePath(currentPath, lang);
 const altUrl = `${site}${altPath}`;
 const enUrl = lang === 'en' ? canonicalUrl : altUrl;

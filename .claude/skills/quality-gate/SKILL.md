@@ -1,64 +1,32 @@
 ---
 name: quality-gate
-description: Comprehensive quality check before deployment. Runs responsive check, animation check, SEO audit, and all tests. Use before deploying or merging important PRs.
+description: Full pre-merge check that runs tests, responsive, animation, and SEO checks and produces a pass/fail table. Use before merging risky or wide-reaching PRs. Merging to main deploys to production.
 disable-model-invocation: true
 ---
 
 # Quality Gate - Full Check
 
-Run all quality checks to ensure the site is ready for deployment.
+Run every check and report one table. Merging to `main` deploys to www.hustlrr.ai, so this is the last stop.
 
 ## Steps
 
-### 1. Build Validation
-- Run `npm run build` — the site must build without errors or warnings
+1. **Tests**: follow the `run-tests` skill (`npm run verify`, then `npm run test:e2e`). If this fails, stop and report. The remaining checks are pointless on a broken build.
+2. **Responsive**: follow `check-responsive` for `/`, `/blog`, one blog article, `/features/multi-model-chat`, `/compare/hustlrr-vs-chatgpt`, and `/de` versions of any page the branch touched.
+3. **Animations**: follow `check-animations` on `/`, including the reduced-motion pass.
+4. **SEO**: follow `check-seo` against the build in `dist/`.
+5. **Visual diff**: if the branch is meant to be visually neutral (refactor or deps), follow `visual-compare` for `/`.
 
-### 2. Responsive Layout Check
-Run the check-responsive skill workflow:
-- Screenshot all key pages at mobile (375x812), tablet (768x1024), desktop (1280x800)
-- Pages to check: `/`, `/blog`, one blog article, `/privacy`, `/imprint`
-- Verify no layout breaks, overlapping content, or horizontal scrolling
-- Verify mobile navigation (hamburger menu) works
-
-### 3. Animation Check
-Run the check-animations skill workflow:
-- Verify scroll-reveal animations have correct CSS properties
-- Verify hover micro-interactions on buttons, cards, links
-- Verify page load animations on hero section
-- Verify View Transitions are configured
-- Verify reduced motion support works
-
-### 4. SEO Audit
-Run the check-seo skill workflow:
-- Every page has proper meta tags (title, description, canonical)
-- Hreflang tags are correct on all EN and DE pages
-- Open Graph and Twitter Card tags present
-- JSON-LD structured data on blog articles
-- Sitemap exists and contains all pages
-- robots.txt exists and is correct
-- RSS feeds are valid
-- Images have alt, width, height attributes
-- Semantic HTML is correct (one h1 per page, proper hierarchy)
-
-### 5. Test Suite
-Run the run-tests skill workflow:
-- All Vitest unit tests pass
-- All Playwright E2E tests pass
-- No visual regressions detected
-
-### 6. Final Report
-
-Produce a summary table:
+## Report
 
 | Check | Status | Issues |
 |---|---|---|
-| Build | PASS/FAIL | ... |
+| Typecheck + unit + build (`verify`) | PASS/FAIL | ... |
+| E2E | PASS/FAIL | ... |
 | Responsive | PASS/FAIL | ... |
 | Animations | PASS/FAIL | ... |
 | SEO | PASS/FAIL | ... |
-| Unit Tests | PASS/FAIL | ... |
-| E2E Tests | PASS/FAIL | ... |
+| Visual diff | PASS/FAIL/SKIPPED | ... |
 
 **Overall: PASS / FAIL**
 
-If any check fails, list the specific issues and suggest fixes.
+For each failure, include the actual error output or screenshot evidence and a proposed fix.

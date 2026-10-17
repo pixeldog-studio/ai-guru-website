@@ -1,51 +1,24 @@
 ---
 name: visual-compare
-description: Visual feedback loop - screenshot local site, compare with Framer original, identify differences, and auto-correct. Use after building any section to match the original Framer design.
+description: Compare the local build of a page against the live production site (www.hustlrr.ai) to catch unintended visual changes. Use after refactors or style changes that should not change how the site looks.
 ---
 
-# Visual Comparison Feedback Loop
+# Visual Comparison Against Production
 
-Compare the local Astro build against the original Framer site at https://www.hustlrr.ai/ and iterate until they match closely.
+Production at https://www.hustlrr.ai is the reference: it is the last merged `main`. Use this to confirm that a change only alters what it was meant to.
 
 ## Steps
 
-1. **Start the preview server** if not already running using `preview_start`
-2. **Determine which page to compare** from $ARGUMENTS (default: homepage `/`)
+1. Pick the page from $ARGUMENTS (default `/`). Also compare its `/de` twin if the change touches shared components.
+2. Start `npm run dev` (port 4321) unless a server is already running for this checkout.
+3. With your browser tool, open both `http://localhost:4321<page>` and `https://www.hustlrr.ai<page>`. Screenshot each at 1280x800, then at 375x812.
+4. List every difference in:
+   - Section order and layout
+   - Colors (tokens in `src/styles/global.css`: bg `#0a0c16`/`#111327`, accent `#5e6cff`)
+   - Typography (Inter for body and display text; sizes from the `--text-*` tokens)
+   - Spacing, radius, shadows
+   - Copy
+5. Sort each difference as **intended** (part of the requested change) or **unintended**. Fix unintended ones in source and re-screenshot.
+6. Report what you compared, what you fixed, and any differences you left on purpose.
 
-### Desktop Comparison
-
-3. **Resize to desktop** (1280x800) and take a screenshot of the local build
-4. **Fetch the original** page from `https://www.hustlrr.ai/` using WebFetch for reference
-5. **Inspect specific CSS values** on the local build using `preview_inspect`:
-   - Background colors (should be `#0a0c16` primary, `#111327` secondary)
-   - Accent color (`#5e6cff`)
-   - Font families (Inter for body, Figtree for headings)
-   - Font sizes and weights
-   - Spacing/padding between sections
-   - Border radius values
-   - Box shadows
-6. **Compare and list differences** between local and original:
-   - Layout structure (section order, grid columns)
-   - Color accuracy
-   - Typography (sizes, weights, line-height)
-   - Spacing (margins, padding, gaps)
-   - Border/shadow treatments
-   - Component placement
-
-### Auto-Correction
-
-7. **For each difference found**:
-   - Identify the source file and CSS class/property to change
-   - Make the fix in the source code
-   - Re-screenshot to verify improvement
-8. **Repeat steps 3-7** until the page closely matches the original
-
-### Responsive Check
-
-9. **Resize to mobile** (375x812) and repeat comparison
-10. **Resize to tablet** (768x1024) and repeat comparison
-11. Fix any responsive-specific issues
-
-### Final Report
-
-12. Summarize what was compared, what was fixed, and any remaining differences that require user input (e.g., content/images they need to provide)
+Expect differences when the branch intentionally changes copy or design. Don't "fix" those back to production.
