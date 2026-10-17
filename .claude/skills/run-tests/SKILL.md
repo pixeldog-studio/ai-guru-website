@@ -1,40 +1,27 @@
 ---
 name: run-tests
-description: Run all tests - Vitest unit tests and Playwright E2E tests. Use after any code change to catch regressions.
-disable-model-invocation: true
+description: Run typecheck, Vitest unit tests, build, and Playwright E2E tests, then triage failures. Use after any code change to catch regressions.
 ---
 
 # Run All Tests
 
-Execute the full test suite and report results.
-
 ## Steps
 
-1. **Run Vitest unit tests**:
+1. **Fast gate** (typecheck, unit tests including the EN/DE parity guard, build):
    ```bash
-   npx vitest run
+   npm run verify
    ```
-   - Report pass/fail count
-   - For any failures, show the test name, expected vs received, and the relevant source file
+   Stop at the first failing stage and fix it before going further.
 
-2. **Build the site** (required for Playwright):
+2. **E2E** (builds and serves this checkout, about 10s locally):
    ```bash
-   npm run build
+   npm run test:e2e
    ```
-   - If build fails, report the error and stop
+   If port 4321 is busy: `PORT=4400 npm run test:e2e`. To narrow down: `npx playwright test tests/e2e/<file>.spec.ts --project="Desktop Chrome"`.
 
-3. **Run Playwright E2E tests**:
-   ```bash
-   npx playwright test
-   ```
-   - Report pass/fail count by test file
-   - For any failures, show the test name, error message, and screenshot if available
+3. **Triage each failure**:
+   - Read the error and `test-results/<test>/error-context.md`, which holds an accessibility snapshot of the page at failure.
+   - Decide whether the **code regressed** (fix the code) or the **test is stale** because UI or copy changed on purpose (update the test in the same change). Never delete a test just to get green.
+   - Parity failures mean an EN/DE twin is missing: add the missing page, post, or translation key. Don't weaken the test.
 
-4. **Analyze failures**:
-   - For each failing test, identify the root cause
-   - Suggest a specific fix with the file path and code change
-   - If the fix is straightforward, apply it and re-run the failing test
-
-5. **Report summary**:
-   - Total tests: X passed, Y failed
-   - List of any remaining failures that need manual attention
+4. **Report**: pass/fail counts per stage, what you fixed, and anything still failing with its actual error output.

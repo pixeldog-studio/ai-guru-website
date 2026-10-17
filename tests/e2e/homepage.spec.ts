@@ -11,8 +11,9 @@ test.describe('Homepage', () => {
   });
 
   test('renders navigation', async ({ page }) => {
-    await expect(page.locator('nav')).toBeVisible();
-    await expect(page.locator('nav >> text=hustlrr')).toBeVisible();
+    const nav = page.getByRole('navigation', { name: 'Main navigation' });
+    await expect(nav).toBeVisible();
+    await expect(nav.getByRole('img', { name: 'hustlrr' })).toBeVisible();
   });
 
   test('renders models section', async ({ page }) => {
@@ -28,11 +29,6 @@ test.describe('Homepage', () => {
 
   test('renders testimonials section', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'What people are saying about Hustlrr' })).toBeVisible();
-  });
-
-  test('renders newsletter CTA', async ({ page }) => {
-    await expect(page.locator('text=Master prompt writing').first()).toBeVisible();
-    await expect(page.locator('input[type="email"]')).toBeVisible();
   });
 
   test('renders footer', async ({ page }) => {

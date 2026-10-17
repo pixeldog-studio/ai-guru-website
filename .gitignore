@@ -27,5 +27,6 @@ pnpm-debug.log*
 playwright-report/
 test-results/
 
-# claude local settings
+# claude local settings and agent worktrees
 .claude/settings.local.json
+.claude/worktrees/

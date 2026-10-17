@@ -9,12 +9,14 @@ Comprehensive SEO verification for all pages following 2026 best practices.
 
 ## Steps
 
-1. **Build the site**: Run `npm run build` to generate the static output
-2. **Start the preview server** using `preview_start`
+1. **Build the site**: run `npm run build`. Most checks below can be done by parsing `dist/**/*.html` directly (a Node script, or `grep`), which covers every page without a browser.
+2. **List the pages**: `find dist -name index.html | sort`. Skip redirect stubs (pages that contain only a meta refresh). Every remaining page, EN and DE, is in scope.
 
-### For EVERY page (/, /blog, /privacy, /service, /imprint, /direct-link, /landing/*, and all /de/ variants):
+`tests/e2e/seo.spec.ts` already asserts a baseline on a few pages. This audit goes wider. If you find a regression that could recur, add an assertion there.
 
-3. **Check meta tags** using `preview_eval` or `preview_snapshot`:
+### For EVERY page:
+
+3. **Check meta tags**:
    - `<title>` exists, under 60 characters, primary keyword near the beginning
    - `<meta name="description">` exists, 150-160 characters, includes a CTA
    - `<meta name="viewport" content="width=device-width, initial-scale=1">`
