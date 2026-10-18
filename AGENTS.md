@@ -4,6 +4,8 @@ Marketing site for **Hustlrr**, an iOS/macOS app for chatting with multiple AI m
 
 **Merging to `main` deploys to production immediately** (`.github/workflows/deploy.yml`). Never push to `main` directly; open a PR.
 
+Shared workflow: `~/Developer/hq/WORKFLOW.md`. This file lists only facts and gotchas specific to this repo.
+
 ## Commands
 
 | Command | What it does |
@@ -13,9 +15,11 @@ Marketing site for **Hustlrr**, an iOS/macOS app for chatting with multiple AI m
 | `npm run check` | Type-check `.astro` and `.ts` files (`astro check`) |
 | `npm test` | Vitest unit tests (`tests/unit`) — under 1s |
 | `npm run build` | Static build to `dist/` |
-| `npm run verify` | **check + unit tests + build.** Run before every commit |
+| `npm run verify` | **check + unit tests + build.** Definition of done; CI (`pr-check.yml`) runs exactly this |
 | `npm run test:e2e` | Playwright against a fresh build (`tests/e2e`, 3 viewports), about 10s locally |
 | `npm run verify:full` | `verify` then E2E. Run before opening a PR that touches UI |
+
+Fast check (Stop hook, `HQ_FAST_VERIFY`): `npm run check`.
 
 Run one E2E file or viewport: `npx playwright test tests/e2e/blog.spec.ts --project="Desktop Chrome"`.
 
@@ -24,11 +28,8 @@ E2E always builds and serves this checkout on port 4321. If that port is busy (f
 ## Definition of done
 
 1. `npm run verify` passes.
-2. If you changed markup, styles, routing, or copy: `npm run test:e2e` passes too.
-3. If you changed visible UI: look at it at 375px, 768px and 1280px (see the `check-responsive` skill).
-4. The PR check (`.github/workflows/pr-check.yml`) runs the same steps: typecheck, unit, build, E2E.
-
-When you change behaviour a test asserts on, update the test in the same change. Don't delete a failing test to make it pass unless the feature it covers was removed on purpose.
+2. Changed markup, styles, routing, or copy: `npm run test:e2e` passes too (the PR check runs it after `verify`).
+3. Changed visible UI: look at it at 375px, 768px and 1280px (see the `check-responsive` skill).
 
 ## Layout
 
@@ -91,4 +92,13 @@ Project skills live in `.claude/skills/`:
 - `visual-compare`: diff local changes against production
 - `quality-gate`: all of the above before a risky merge
 
-For browser checks, use whichever browser tool your harness provides (Playwright MCP, Chrome DevTools MCP, or a preview tool) against `npm run dev` or `npm run preview`. Shared permissions for routine commands are in `.claude/settings.json`; personal overrides go in `.claude/settings.local.json` (gitignored).
+The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality-gate` skill (receipt in `.hq/receipt.json`) is the PR gate. For browser checks, use whichever browser tool your harness provides against `npm run dev` or `npm run preview`. Shared permissions and hq hooks (worktree-guard, git-guard, config-protection, lint-on-edit, stop-verify) are in `.claude/settings.json`; personal overrides go in `.claude/settings.local.json` (gitignored).
+
+## Observability
+
+- Errors go to: none (static site). No analytics, error tracking or client-side logging is wired up; App Store attribution rides on the campaign parameters in `APP_STORE_URL` and is read in App Store Connect, not here.
+- Build and deploy logs: GitHub Actions (`PR Check` on PRs, `Deploy to GitHub Pages` on `main`). Read them with `gh run list -R rubenspessoa/ai-guru-website` and `gh run view <id> --log-failed`.
+
+## Linear
+
+- Project: Hustlrr (team FRO). Branch `FRO-123-slug`, PR title `FRO-123: summary`, base `main`.

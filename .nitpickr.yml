@@ -1,0 +1,23 @@
+# Canonical Nitpickr config; repos add their own focusAreas/ignorePaths.
+version: 1
+triggers:
+  autoReview:
+    enabled: true
+    # Drafts are reviewed once marked ready, then on every push.
+    events:
+      - pull_request.ready_for_review
+      - pull_request.synchronize
+review:
+  strictness: balanced
+  maxComments: 20
+  focusAreas:
+    - correctness
+    - security
+    - tests or fixtures weakened to make checks pass
+    - EN/DE parity (every page, translation key and blog post ships in both languages)
+    - App Store links go through APP_STORE_URL; removed URLs get redirects
+  ignorePaths:
+    - "**/Package.resolved"
+    - "**/pnpm-lock.yaml"
+    - "package-lock.json"
+    - "assets/**"
