@@ -31,3 +31,6 @@ test-results/
 # claude local settings and agent worktrees
 .claude/settings.local.json
 .claude/worktrees/
+
+# hq gate receipts and stop-verify state
+.hq/
