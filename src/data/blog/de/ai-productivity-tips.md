@@ -1,6 +1,6 @@
 ---
-title: "10 Wege, wie KI Ihre tägliche Produktivität steigern kann"
-description: "Praktische Tipps zur Integration von KI in Ihren täglichen Workflow. Sparen Sie jede Woche Stunden mit diesen KI-gestützten Produktivitätsstrategien."
+title: '10 Wege, wie KI Ihre tägliche Produktivität steigern kann'
+description: 'Praktische Tipps zur Integration von KI in Ihren täglichen Workflow. Sparen Sie jede Woche Stunden mit diesen KI-gestützten Produktivitätsstrategien.'
 pubDate: 2026-02-20
 lang: de
 translationSlug: ai-productivity-tips

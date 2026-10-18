@@ -6,7 +6,9 @@ test.describe('Homepage', () => {
   });
 
   test('renders hero section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Chat with the best AI models', level: 1 })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Chat with the best AI models', level: 1 }),
+    ).toBeVisible();
     await expect(page.locator('text=Get Hustlrr for free').first()).toBeVisible();
   });
 
@@ -17,18 +19,24 @@ test.describe('Homepage', () => {
   });
 
   test('renders models section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'All the top AI models in one app' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'All the top AI models in one app' }),
+    ).toBeVisible();
     await expect(page.getByText('Powered by')).toBeVisible();
   });
 
   test('renders features section', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Chat with AI on any webpage' })).toHaveCount(0);
     await expect(page.getByRole('heading', { name: 'Ask anything, do everything' })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Private by design, with full control' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Private by design, with full control' }),
+    ).toBeVisible();
   });
 
   test('renders testimonials section', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'What people are saying about Hustlrr' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'What people are saying about Hustlrr' }),
+    ).toBeVisible();
   });
 
   test('renders footer', async ({ page }) => {

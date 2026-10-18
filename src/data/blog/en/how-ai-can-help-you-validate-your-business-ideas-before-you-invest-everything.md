@@ -1,6 +1,6 @@
 ---
-title: "How AI Can Help You Validate Your Business Ideas Before You Invest Everything"
-description: "Discover how AI tools like GPT, Claude, and Gemini can help validate your business ideas quickly and cost-effectively."
+title: 'How AI Can Help You Validate Your Business Ideas Before You Invest Everything'
+description: 'Discover how AI tools like GPT, Claude, and Gemini can help validate your business ideas quickly and cost-effectively.'
 pubDate: 2026-02-23
 lang: en
 translationSlug: how-ai-can-help-you-validate-your-business-ideas-before-you-invest-everything

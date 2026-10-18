@@ -49,9 +49,12 @@ describe('EN/DE parity', () => {
       for (const file of listFiles(join(blogDir, lang))) {
         const source = readFileSync(join(blogDir, lang, file), 'utf8');
         const frontmatter = source.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '';
-        const field = (name: string) => frontmatter.match(new RegExp(`^${name}:\\s*["']?([^"'\\n]+)`, 'm'))?.[1].trim();
+        const field = (name: string) =>
+          frontmatter.match(new RegExp(`^${name}:\\s*["']?([^"'\\n]+)`, 'm'))?.[1].trim();
         expect(field('lang'), `${lang}/${file} lang`).toBe(lang);
-        expect(field('translationSlug'), `${lang}/${file} translationSlug`).toBe(file.replace(/\.md$/, ''));
+        expect(field('translationSlug'), `${lang}/${file} translationSlug`).toBe(
+          file.replace(/\.md$/, ''),
+        );
       }
     }
   });

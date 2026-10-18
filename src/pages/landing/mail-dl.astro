@@ -10,13 +10,13 @@ const t = useTranslations(lang);
 
 <LandingLayout title="Download Ready | Hustlrr" description="Your download is ready." lang={lang}>
   <div class="animate-hero">
-    <div class="text-5xl mb-6" aria-hidden="true">&#x1F4E5;</div>
+    <div class="text-5xl mb-6" aria-hidden="true">
+      &#x1F4E5;
+    </div>
     <h1 class="text-[var(--text-h1)] font-bold font-[var(--font-display)] mb-4">
       {t('landing.dl.title')}
     </h1>
-    <p class="text-text-secondary mb-8">
-      {t('landing.dl.message')}
-    </p>
+    <p class="text-text-secondary mb-8">{t('landing.dl.message')}</p>
     <Button href="/" variant="secondary" size="lg">
       Back to Home
     </Button>

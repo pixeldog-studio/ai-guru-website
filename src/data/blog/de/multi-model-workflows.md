@@ -1,6 +1,6 @@
 ---
-title: "Multi-Modell-KI-Workflows: Das Beste aus jedem Modell herausholen"
-description: "Erfahren Sie, wie die Kombination mehrerer KI-Modelle bessere Ergebnisse liefert als die Nutzung eines einzelnen Modells."
+title: 'Multi-Modell-KI-Workflows: Das Beste aus jedem Modell herausholen'
+description: 'Erfahren Sie, wie die Kombination mehrerer KI-Modelle bessere Ergebnisse liefert als die Nutzung eines einzelnen Modells.'
 pubDate: 2026-02-10
 lang: de
 translationSlug: multi-model-workflows

@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with AI Models: A Beginner's Guide"
-description: "Learn how to get the most out of AI models like GPT-6, Claude, and Gemini. From basic prompting to advanced techniques."
+description: 'Learn how to get the most out of AI models like GPT-6, Claude, and Gemini. From basic prompting to advanced techniques.'
 pubDate: 2025-12-15
 lang: en
 translationSlug: getting-started-with-ai-models

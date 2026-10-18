@@ -4,7 +4,9 @@ import { join } from 'node:path';
 
 // Derive expected card counts from the content folder so adding a post doesn't break the suite.
 const postCount = (lang: 'en' | 'de') =>
-  readdirSync(join(import.meta.dirname, '../../src/data/blog', lang)).filter((f) => f.endsWith('.md')).length;
+  readdirSync(join(import.meta.dirname, '../../src/data/blog', lang)).filter((f) =>
+    f.endsWith('.md'),
+  ).length;
 
 test.describe('Blog', () => {
   test('blog listing shows articles', async ({ page }) => {
