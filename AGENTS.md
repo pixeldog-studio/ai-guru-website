@@ -92,7 +92,7 @@ Project skills live in `.claude/skills/`:
 - `visual-compare`: diff local changes against production
 - `quality-gate`: all of the above before a risky merge
 
-The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality-gate` skill (receipt in `.hq/receipt.json`) is the PR gate. For browser checks, use whichever browser tool your harness provides against `npm run dev` or `npm run preview`. Shared permissions are in `.claude/settings.json`; the hq hooks (worktree-guard, git-guard, config-protection, lint-on-edit, stop-verify) live in `.claude/hooks/hq/` and must stay byte-identical to hq; personal overrides go in `.claude/settings.local.json` (gitignored).
+The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality-gate` skill (receipt in `.hq/receipt.json`) is the PR gate. For browser checks, use whichever browser tool your harness provides against `npm run dev` or `npm run preview`. Shared permissions are in `.claude/settings.json`; guard hooks run from `~/Developer/hq/hooks/` (worktree-guard, git-guard, config-protection, lint-on-edit, stop-verify); personal overrides go in `.claude/settings.local.json` (gitignored).
 
 ## Observability
 
