@@ -9,7 +9,14 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const models = ['GPT-6', 'Grok 4.7', 'Mistral Large 4', 'DeepSeek V4', 'Gemini 4', 'Claude Opus 5.5'];
+const models = [
+  'GPT-6',
+  'Grok 4.7',
+  'Mistral Large 4',
+  'DeepSeek V4',
+  'Gemini 4',
+  'Claude Opus 5.5',
+];
 ---
 
 <section class="px-5 py-[var(--spacing-section)]">
@@ -29,7 +36,10 @@ const models = ['GPT-6', 'Grok 4.7', 'Mistral Large 4', 'DeepSeek V4', 'Gemini 4
     <!-- Model badges -->
     <div class="animate-reveal flex flex-wrap items-center justify-center gap-3">
       {models.map((model) => (
-        <div class="bg-white rounded-[var(--radius-badge)] px-[14px] py-[10px] min-w-[144px] text-center text-[22px] font-semibold" style="color: #131313;">
+        <div
+          class="bg-white rounded-[var(--radius-badge)] px-[14px] py-[10px] min-w-[144px] text-center text-[22px] font-semibold"
+          style="color: #131313;"
+        >
           {model}
         </div>
       ))}

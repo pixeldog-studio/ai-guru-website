@@ -1,6 +1,6 @@
 ---
-title: "Multi-Model AI Workflows: Getting the Best from Each Model"
-description: "Learn how combining multiple AI models can produce better results than using any single model alone."
+title: 'Multi-Model AI Workflows: Getting the Best from Each Model'
+description: 'Learn how combining multiple AI models can produce better results than using any single model alone.'
 pubDate: 2026-02-10
 lang: en
 translationSlug: multi-model-workflows

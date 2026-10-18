@@ -8,15 +8,19 @@ const lang: Lang = 'en';
 const t = useTranslations(lang);
 ---
 
-<LandingLayout title="Email Confirmed | Hustlrr" description="Your email has been confirmed successfully." lang={lang}>
+<LandingLayout
+  title="Email Confirmed | Hustlrr"
+  description="Your email has been confirmed successfully."
+  lang={lang}
+>
   <div class="animate-hero">
-    <div class="text-5xl mb-6" aria-hidden="true">&#x2705;</div>
+    <div class="text-5xl mb-6" aria-hidden="true">
+      &#x2705;
+    </div>
     <h1 class="text-[var(--text-h1)] font-bold font-[var(--font-display)] mb-4">
       {t('landing.success.title')}
     </h1>
-    <p class="text-text-secondary mb-8">
-      {t('landing.success.message')}
-    </p>
+    <p class="text-text-secondary mb-8">{t('landing.success.message')}</p>
     <Button href="https://app.hustlrr.ai" variant="primary" size="lg" external>
       Start Chatting
     </Button>

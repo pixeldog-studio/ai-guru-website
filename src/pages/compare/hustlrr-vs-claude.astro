@@ -53,11 +53,19 @@ const jsonLd = {
   <!-- Breadcrumbs -->
   <nav class="mx-auto max-w-[var(--max-w-content)] px-5 pt-8 pb-4" aria-label="Breadcrumb">
     <ol class="flex items-center gap-2 text-sm text-text-secondary">
-      <li><a href={getLocalizedPath('/', lang)} class="hover:text-white transition-colors">{t('page.breadcrumb.home')}</a></li>
+      <li>
+        <a href={getLocalizedPath('/', lang)} class="hover:text-white transition-colors">
+          {t('page.breadcrumb.home')}
+        </a>
+      </li>
       <li aria-hidden="true">/</li>
-      <li><span>{t('page.breadcrumb.compare')}</span></li>
+      <li>
+        <span>{t('page.breadcrumb.compare')}</span>
+      </li>
       <li aria-hidden="true">/</li>
-      <li class="text-white" aria-current="page">{t('compare.vsClaude.title')}</li>
+      <li class="text-white" aria-current="page">
+        {t('compare.vsClaude.title')}
+      </li>
     </ol>
   </nav>
 
@@ -84,16 +92,28 @@ const jsonLd = {
   <section class="px-5 py-16">
     <div class="mx-auto max-w-[var(--max-w-content)] grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="animate-reveal">
-        <h3 class="text-[20px] font-semibold text-white mb-2">{t('compare.vsClaude.diff1Title')}</h3>
-        <p class="text-[16px] text-text-secondary leading-relaxed">{t('compare.vsClaude.diff1Text')}</p>
+        <h3 class="text-[20px] font-semibold text-white mb-2">
+          {t('compare.vsClaude.diff1Title')}
+        </h3>
+        <p class="text-[16px] text-text-secondary leading-relaxed">
+          {t('compare.vsClaude.diff1Text')}
+        </p>
       </div>
       <div class="animate-reveal">
-        <h3 class="text-[20px] font-semibold text-white mb-2">{t('compare.vsClaude.diff2Title')}</h3>
-        <p class="text-[16px] text-text-secondary leading-relaxed">{t('compare.vsClaude.diff2Text')}</p>
+        <h3 class="text-[20px] font-semibold text-white mb-2">
+          {t('compare.vsClaude.diff2Title')}
+        </h3>
+        <p class="text-[16px] text-text-secondary leading-relaxed">
+          {t('compare.vsClaude.diff2Text')}
+        </p>
       </div>
       <div class="animate-reveal">
-        <h3 class="text-[20px] font-semibold text-white mb-2">{t('compare.vsClaude.diff3Title')}</h3>
-        <p class="text-[16px] text-text-secondary leading-relaxed">{t('compare.vsClaude.diff3Text')}</p>
+        <h3 class="text-[20px] font-semibold text-white mb-2">
+          {t('compare.vsClaude.diff3Title')}
+        </h3>
+        <p class="text-[16px] text-text-secondary leading-relaxed">
+          {t('compare.vsClaude.diff3Text')}
+        </p>
       </div>
     </div>
   </section>
@@ -103,7 +123,9 @@ const jsonLd = {
     <div class="mx-auto max-w-[var(--max-w-content)] animate-reveal">
       <div class="rounded-[var(--radius-section)] bg-accent/10 border border-accent/20 p-8 md:p-12">
         <h2 class="text-[24px] font-bold text-white mb-4">{t('compare.verdict')}</h2>
-        <p class="text-[17px] text-text-secondary leading-relaxed">{t('compare.vsClaude.verdictText')}</p>
+        <p class="text-[17px] text-text-secondary leading-relaxed">
+          {t('compare.vsClaude.verdictText')}
+        </p>
       </div>
     </div>
   </section>
@@ -114,16 +136,28 @@ const jsonLd = {
       <h2 class="text-[24px] font-bold text-white text-center mb-10">{t('compare.faq.title')}</h2>
       <div class="max-w-2xl mx-auto space-y-8">
         <div class="animate-reveal">
-          <h3 class="text-[17px] font-semibold text-white mb-2">{t('compare.vsClaude.faq1Question')}</h3>
-          <p class="text-[15px] text-text-secondary leading-relaxed">{t('compare.vsClaude.faq1Answer')}</p>
+          <h3 class="text-[17px] font-semibold text-white mb-2">
+            {t('compare.vsClaude.faq1Question')}
+          </h3>
+          <p class="text-[15px] text-text-secondary leading-relaxed">
+            {t('compare.vsClaude.faq1Answer')}
+          </p>
         </div>
         <div class="animate-reveal">
-          <h3 class="text-[17px] font-semibold text-white mb-2">{t('compare.vsClaude.faq2Question')}</h3>
-          <p class="text-[15px] text-text-secondary leading-relaxed">{t('compare.vsClaude.faq2Answer')}</p>
+          <h3 class="text-[17px] font-semibold text-white mb-2">
+            {t('compare.vsClaude.faq2Question')}
+          </h3>
+          <p class="text-[15px] text-text-secondary leading-relaxed">
+            {t('compare.vsClaude.faq2Answer')}
+          </p>
         </div>
         <div class="animate-reveal">
-          <h3 class="text-[17px] font-semibold text-white mb-2">{t('compare.vsClaude.faq3Question')}</h3>
-          <p class="text-[15px] text-text-secondary leading-relaxed">{t('compare.vsClaude.faq3Answer')}</p>
+          <h3 class="text-[17px] font-semibold text-white mb-2">
+            {t('compare.vsClaude.faq3Question')}
+          </h3>
+          <p class="text-[15px] text-text-secondary leading-relaxed">
+            {t('compare.vsClaude.faq3Answer')}
+          </p>
         </div>
       </div>
     </div>
@@ -139,8 +173,17 @@ const jsonLd = {
         class="inline-flex items-center gap-4 bg-white text-bg-primary font-bold text-[22px] pl-10 pr-6 py-6 rounded-[var(--radius-cta)] hover:bg-gray-100 transition-colors duration-200"
       >
         {t('cta.getHustlrr')}
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
       </a>
     </div>

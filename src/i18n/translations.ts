@@ -28,8 +28,7 @@ export const translations = {
     // Hero
     'hero.tagline': 'Chat with the Best AI Models',
     'hero.title': 'Chat with the best AI models',
-    'hero.subtitle':
-      'Choose your AI model, ask anything, and compare how each one answers',
+    'hero.subtitle': 'Choose your AI model, ask anything, and compare how each one answers',
 
     // Models
     'models.title': 'All the top AI models in one app',
@@ -53,7 +52,7 @@ export const translations = {
       'Stop juggling multiple AI subscriptions. Get everything in one plan.',
     'features.workflows.title': 'AI Workflows',
     'features.workflows.description':
-      'Chain models together for complex tasks that single models can\'t handle.',
+      "Chain models together for complex tasks that single models can't handle.",
 
     // Testimonials
     'testimonials.title': 'What people are saying about Hustlrr',
@@ -66,7 +65,7 @@ export const translations = {
       'Real people answer your questions. No bots. Our team answers your questions and helps you get the most out of Hustlrr.',
     'privacy.dataTitle': 'Your data stays yours',
     'privacy.dataDescription':
-      'Your conversations live only in your encrypted iCloud. Nothing is stored on our servers, and we can\'t access your chats.',
+      "Your conversations live only in your encrypted iCloud. Nothing is stored on our servers, and we can't access your chats.",
 
     // Blog
     'blog.title': 'Blog',
@@ -77,12 +76,10 @@ export const translations = {
 
     // Newsletter
     'newsletter.title': 'Master prompt writing with our free guide',
-    'newsletter.subtitle':
-      'Write prompts that AI responds to more accurately',
+    'newsletter.subtitle': 'Write prompts that AI responds to more accurately',
     'newsletter.placeholder': 'name@email.com',
     'newsletter.button': 'Get guide',
-    'newsletter.consent':
-      'By tapping Get Guide, you accept our Terms of Use and Privacy Policy.',
+    'newsletter.consent': 'By tapping Get Guide, you accept our Terms of Use and Privacy Policy.',
 
     // Footer
     'footer.rights': 'All rights reserved.',
@@ -99,13 +96,11 @@ export const translations = {
 
     // Landing pages
     'landing.success.title': 'Success!',
-    'landing.success.message':
-      'Your email has been confirmed. Welcome to the Hustlrr community!',
+    'landing.success.message': 'Your email has been confirmed. Welcome to the Hustlrr community!',
     'landing.dl.title': 'Download Ready',
     'landing.dl.message': 'Your download is ready. Check your email for the link.',
     'landing.business.title': 'Business Inquiry Received',
-    'landing.business.message':
-      'Thank you for your interest. We\'ll get back to you shortly.',
+    'landing.business.message': "Thank you for your interest. We'll get back to you shortly.",
 
     // Navigation — new
     'nav.features': 'Features',
@@ -143,7 +138,8 @@ export const translations = {
     'compare.vsChatGPT.title': 'Hustlrr vs ChatGPT',
     'compare.vsChatGPT.description':
       'Compare Hustlrr and ChatGPT side by side. See which AI chat app offers more models and better privacy on iPhone.',
-    'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — which AI chat app is better for iPhone?',
+    'compare.vsChatGPT.heroHeadline':
+      'Hustlrr vs ChatGPT — which AI chat app is better for iPhone?',
     'compare.vsChatGPT.heroLead':
       'ChatGPT gives you one model. Hustlrr gives you GPT-6, Claude, Gemini, Grok, and more in a single app.',
     'compare.vsChatGPT.diff1Title': 'Multiple models vs one',
@@ -158,9 +154,11 @@ export const translations = {
     'compare.vsChatGPT.verdictText':
       'If you only need GPT, ChatGPT works fine. If you want the freedom to use multiple AI models and keep your data private, Hustlrr is the better choice.',
     'compare.vsChatGPT.faq1Question': 'Can I use GPT-6 in Hustlrr?',
-    'compare.vsChatGPT.faq1Answer': 'Yes. Hustlrr includes GPT-6 alongside Claude, Gemini, Grok, and other leading models.',
+    'compare.vsChatGPT.faq1Answer':
+      'Yes. Hustlrr includes GPT-6 alongside Claude, Gemini, Grok, and other leading models.',
     'compare.vsChatGPT.faq2Question': 'Is Hustlrr free?',
-    'compare.vsChatGPT.faq2Answer': 'Hustlrr offers a free tier. Premium plans unlock higher usage limits and all models.',
+    'compare.vsChatGPT.faq2Answer':
+      'Hustlrr offers a free tier. Premium plans unlock higher usage limits and all models.',
     'compare.vsChatGPT.faq3Question': 'Does Hustlrr work on Mac?',
     'compare.vsChatGPT.faq3Answer': 'Yes. Hustlrr is available on iPhone, iPad, and Mac.',
 
@@ -169,7 +167,7 @@ export const translations = {
       'Compare Hustlrr and the Claude app. See why a multi-model AI chat app gives you more flexibility on iPhone.',
     'compare.vsClaude.heroHeadline': 'Hustlrr vs Claude — why limit yourself to one AI model?',
     'compare.vsClaude.heroLead':
-      'The Claude app gives you Anthropic\'s models. Hustlrr gives you Claude plus GPT-6, Gemini, Grok, and more.',
+      "The Claude app gives you Anthropic's models. Hustlrr gives you Claude plus GPT-6, Gemini, Grok, and more.",
     'compare.vsClaude.diff1Title': 'Claude plus everything else',
     'compare.vsClaude.diff1Text':
       'Love Claude? Use it inside Hustlrr. But when you need a different perspective, switch to GPT-6, Gemini, or Grok without leaving the app.',
@@ -182,11 +180,14 @@ export const translations = {
     'compare.vsClaude.verdictText':
       'If Claude is the only model you need, the official Claude app is a great choice. If you want Claude, GPT-6, Gemini, and Grok in one app, Hustlrr gives you that flexibility.',
     'compare.vsClaude.faq1Question': 'Can I use Claude in Hustlrr?',
-    'compare.vsClaude.faq1Answer': 'Yes. Hustlrr includes Claude alongside GPT-6, Gemini, Grok, and other models.',
+    'compare.vsClaude.faq1Answer':
+      'Yes. Hustlrr includes Claude alongside GPT-6, Gemini, Grok, and other models.',
     'compare.vsClaude.faq2Question': 'Which app has better privacy?',
-    'compare.vsClaude.faq2Answer': 'Both take privacy seriously. Hustlrr stores everything in your encrypted iCloud with zero server-side storage.',
+    'compare.vsClaude.faq2Answer':
+      'Both take privacy seriously. Hustlrr stores everything in your encrypted iCloud with zero server-side storage.',
     'compare.vsClaude.faq3Question': 'Is Hustlrr available in Europe?',
-    'compare.vsClaude.faq3Answer': 'Yes. Hustlrr is built in Europe and available worldwide on the App Store.',
+    'compare.vsClaude.faq3Answer':
+      'Yes. Hustlrr is built in Europe and available worldwide on the App Store.',
 
     // Shared feature/compare page strings
     'page.learnMore': 'Learn more',
@@ -214,8 +215,7 @@ export const translations = {
     // Hero
     'hero.tagline': 'Chatte mit den besten KI-Modellen',
     'hero.title': 'Chatte mit den besten KI-Modellen',
-    'hero.subtitle':
-      'Wähle dein KI-Modell, frage alles und vergleiche, wie jedes antwortet',
+    'hero.subtitle': 'Wähle dein KI-Modell, frage alles und vergleiche, wie jedes antwortet',
 
     // Models
     'models.title': 'Alle Top-KI-Modelle in einer App',
@@ -235,8 +235,7 @@ export const translations = {
     'features.privacy.description':
       'Du entscheidest genau, wie jedes Modell deine Informationen nutzt. Wechsle zwischen Anbietern und teile nur, was du für jede Frage wählst.',
     'features.simple.title': 'Ein Abonnement',
-    'features.simple.description':
-      'Schluss mit mehreren KI-Abos. Alles in einem Plan.',
+    'features.simple.description': 'Schluss mit mehreren KI-Abos. Alles in einem Plan.',
     'features.workflows.title': 'KI-Workflows',
     'features.workflows.description':
       'Kombiniere Modelle für komplexe Aufgaben, die einzelne Modelle nicht bewältigen.',
@@ -263,8 +262,7 @@ export const translations = {
 
     // Newsletter
     'newsletter.title': 'Meistere Prompt-Writing mit unserem kostenlosen Guide',
-    'newsletter.subtitle':
-      'Schreibe Prompts, auf die KI genauer antwortet',
+    'newsletter.subtitle': 'Schreibe Prompts, auf die KI genauer antwortet',
     'newsletter.placeholder': 'name@email.com',
     'newsletter.button': 'Guide holen',
     'newsletter.consent':
@@ -285,14 +283,11 @@ export const translations = {
 
     // Landing pages
     'landing.success.title': 'Erfolg!',
-    'landing.success.message':
-      'Deine E-Mail wurde bestätigt. Willkommen in der Hustlrr-Community!',
+    'landing.success.message': 'Deine E-Mail wurde bestätigt. Willkommen in der Hustlrr-Community!',
     'landing.dl.title': 'Download bereit',
-    'landing.dl.message':
-      'Dein Download ist bereit. Prüfe deine E-Mail für den Link.',
+    'landing.dl.message': 'Dein Download ist bereit. Prüfe deine E-Mail für den Link.',
     'landing.business.title': 'Geschäftsanfrage erhalten',
-    'landing.business.message':
-      'Vielen Dank für dein Interesse. Wir melden uns in Kürze.',
+    'landing.business.message': 'Vielen Dank für dein Interesse. Wir melden uns in Kürze.',
 
     // Navigation — new
     'nav.features': 'Funktionen',
@@ -330,7 +325,8 @@ export const translations = {
     'compare.vsChatGPT.title': 'Hustlrr vs ChatGPT',
     'compare.vsChatGPT.description':
       'Vergleiche Hustlrr und ChatGPT Seite an Seite. Welche KI-Chat-App bietet mehr Modelle und besseren Datenschutz auf dem iPhone?',
-    'compare.vsChatGPT.heroHeadline': 'Hustlrr vs ChatGPT — welche KI-Chat-App ist besser fürs iPhone?',
+    'compare.vsChatGPT.heroHeadline':
+      'Hustlrr vs ChatGPT — welche KI-Chat-App ist besser fürs iPhone?',
     'compare.vsChatGPT.heroLead':
       'ChatGPT bietet dir ein Modell. Hustlrr gibt dir GPT-6, Claude, Gemini, Grok und mehr in einer App.',
     'compare.vsChatGPT.diff1Title': 'Mehrere Modelle statt einem',
@@ -345,16 +341,19 @@ export const translations = {
     'compare.vsChatGPT.verdictText':
       'Wenn du nur GPT brauchst, funktioniert ChatGPT gut. Wenn du mehrere KI-Modelle nutzen und deine Daten schützen willst, ist Hustlrr die bessere Wahl.',
     'compare.vsChatGPT.faq1Question': 'Kann ich GPT-6 in Hustlrr nutzen?',
-    'compare.vsChatGPT.faq1Answer': 'Ja. Hustlrr bietet GPT-6 neben Claude, Gemini, Grok und weiteren Modellen.',
+    'compare.vsChatGPT.faq1Answer':
+      'Ja. Hustlrr bietet GPT-6 neben Claude, Gemini, Grok und weiteren Modellen.',
     'compare.vsChatGPT.faq2Question': 'Ist Hustlrr kostenlos?',
-    'compare.vsChatGPT.faq2Answer': 'Hustlrr bietet eine kostenlose Stufe. Premium-Pläne schalten höhere Limits und alle Modelle frei.',
+    'compare.vsChatGPT.faq2Answer':
+      'Hustlrr bietet eine kostenlose Stufe. Premium-Pläne schalten höhere Limits und alle Modelle frei.',
     'compare.vsChatGPT.faq3Question': 'Funktioniert Hustlrr auf dem Mac?',
     'compare.vsChatGPT.faq3Answer': 'Ja. Hustlrr ist auf iPhone, iPad und Mac verfügbar.',
 
     'compare.vsClaude.title': 'Hustlrr vs Claude',
     'compare.vsClaude.description':
       'Vergleiche Hustlrr und die Claude-App. Warum eine Multi-Modell-KI-App dir mehr Flexibilität auf dem iPhone bietet.',
-    'compare.vsClaude.heroHeadline': 'Hustlrr vs Claude — warum sich auf ein KI-Modell beschränken?',
+    'compare.vsClaude.heroHeadline':
+      'Hustlrr vs Claude — warum sich auf ein KI-Modell beschränken?',
     'compare.vsClaude.heroLead':
       'Die Claude-App gibt dir Anthropics Modelle. Hustlrr gibt dir Claude plus GPT-6, Gemini, Grok und mehr.',
     'compare.vsClaude.diff1Title': 'Claude plus alles andere',
@@ -369,11 +368,14 @@ export const translations = {
     'compare.vsClaude.verdictText':
       'Wenn Claude das einzige Modell ist, das du brauchst, ist die offizielle Claude-App eine gute Wahl. Wenn du Claude, GPT-6, Gemini und Grok in einer App willst, gibt Hustlrr dir diese Flexibilität.',
     'compare.vsClaude.faq1Question': 'Kann ich Claude in Hustlrr nutzen?',
-    'compare.vsClaude.faq1Answer': 'Ja. Hustlrr bietet Claude neben GPT-6, Gemini, Grok und weiteren Modellen.',
+    'compare.vsClaude.faq1Answer':
+      'Ja. Hustlrr bietet Claude neben GPT-6, Gemini, Grok und weiteren Modellen.',
     'compare.vsClaude.faq2Question': 'Welche App hat besseren Datenschutz?',
-    'compare.vsClaude.faq2Answer': 'Beide nehmen Datenschutz ernst. Hustlrr speichert alles in deinem verschlüsselten iCloud ohne serverseitige Speicherung.',
+    'compare.vsClaude.faq2Answer':
+      'Beide nehmen Datenschutz ernst. Hustlrr speichert alles in deinem verschlüsselten iCloud ohne serverseitige Speicherung.',
     'compare.vsClaude.faq3Question': 'Ist Hustlrr in Europa verfügbar?',
-    'compare.vsClaude.faq3Answer': 'Ja. Hustlrr wird in Europa entwickelt und ist weltweit im App Store verfügbar.',
+    'compare.vsClaude.faq3Answer':
+      'Ja. Hustlrr wird in Europa entwickelt und ist weltweit im App Store verfügbar.',
 
     // Shared feature/compare page strings
     'page.learnMore': 'Mehr erfahren',

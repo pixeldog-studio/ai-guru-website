@@ -1,6 +1,6 @@
 ---
-title: "10 Ways AI Can Boost Your Daily Productivity"
-description: "Practical tips for integrating AI into your daily workflow. Save hours every week with these AI-powered productivity strategies."
+title: '10 Ways AI Can Boost Your Daily Productivity'
+description: 'Practical tips for integrating AI into your daily workflow. Save hours every week with these AI-powered productivity strategies.'
 pubDate: 2026-02-20
 lang: en
 translationSlug: ai-productivity-tips

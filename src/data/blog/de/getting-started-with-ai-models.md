@@ -1,6 +1,6 @@
 ---
-title: "Erste Schritte mit KI-Modellen: Ein Leitfaden für Einsteiger"
-description: "Erfahren Sie, wie Sie das Beste aus KI-Modellen wie GPT-6, Claude und Gemini herausholen. Von einfachen Prompts bis zu fortgeschrittenen Techniken."
+title: 'Erste Schritte mit KI-Modellen: Ein Leitfaden für Einsteiger'
+description: 'Erfahren Sie, wie Sie das Beste aus KI-Modellen wie GPT-6, Claude und Gemini herausholen. Von einfachen Prompts bis zu fortgeschrittenen Techniken.'
 pubDate: 2025-12-15
 lang: de
 translationSlug: getting-started-with-ai-models

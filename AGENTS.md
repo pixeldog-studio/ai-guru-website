@@ -6,16 +6,16 @@ Marketing site for **Hustlrr**, an iOS/macOS app for chatting with multiple AI m
 
 ## Commands
 
-| Command | What it does |
-| --- | --- |
-| `npm ci` | Install deps (each git worktree needs its own install) |
-| `npm run dev` | Dev server on http://localhost:4321 |
-| `npm run check` | Type-check `.astro` and `.ts` files (`astro check`) |
-| `npm test` | Vitest unit tests (`tests/unit`) — under 1s |
-| `npm run build` | Static build to `dist/` |
-| `npm run verify` | **check + unit tests + build.** Run before every commit |
-| `npm run test:e2e` | Playwright against a fresh build (`tests/e2e`, 3 viewports), about 10s locally |
-| `npm run verify:full` | `verify` then E2E. Run before opening a PR that touches UI |
+| Command               | What it does                                                                   |
+| --------------------- | ------------------------------------------------------------------------------ |
+| `npm ci`              | Install deps (each git worktree needs its own install)                         |
+| `npm run dev`         | Dev server on http://localhost:4321                                            |
+| `npm run check`       | Type-check `.astro` and `.ts` files (`astro check`)                            |
+| `npm test`            | Vitest unit tests (`tests/unit`) — under 1s                                    |
+| `npm run build`       | Static build to `dist/`                                                        |
+| `npm run verify`      | **check + unit tests + build.** Run before every commit                        |
+| `npm run test:e2e`    | Playwright against a fresh build (`tests/e2e`, 3 viewports), about 10s locally |
+| `npm run verify:full` | `verify` then E2E. Run before opening a PR that touches UI                     |
 
 Run one E2E file or viewport: `npx playwright test tests/e2e/blog.spec.ts --project="Desktop Chrome"`.
 
@@ -53,6 +53,7 @@ Path aliases (tsconfig): `@components/*`, `@layouts/*`, `@i18n/*`, `@lib/*`, `@/
 ## Rules that aren't obvious from the code
 
 **EN and DE always ship together.** `tests/unit/parity.test.ts` enforces that:
+
 - every file under `src/pages/` (outside `de/`) has a twin at the same path under `src/pages/de/`
 - `translations.en` and `translations.de` have identical keys and no empty values
 - every post in `src/data/blog/en/` has a same-named post in `src/data/blog/de/`, with `lang` set and a matching `translationSlug`
@@ -84,6 +85,7 @@ German copy should read as natural German, not a word-for-word translation. Matc
 ## Agent tooling
 
 Project skills live in `.claude/skills/`:
+
 - `run-tests`: run the suites and triage failures
 - `check-responsive`: screenshot and inspect at mobile/tablet/desktop
 - `check-animations`: verify reveal and hover motion plus reduced-motion

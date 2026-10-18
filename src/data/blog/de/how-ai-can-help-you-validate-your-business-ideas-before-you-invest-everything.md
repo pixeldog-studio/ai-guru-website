@@ -1,6 +1,6 @@
 ---
-title: "Wie KI Ihnen helfen kann, Geschäftsideen zu validieren, bevor Sie alles investieren"
-description: "Entdecken Sie, wie KI-Tools wie GPT, Claude und Gemini helfen können, Geschäftsideen schnell und kostengünstig zu validieren."
+title: 'Wie KI Ihnen helfen kann, Geschäftsideen zu validieren, bevor Sie alles investieren'
+description: 'Entdecken Sie, wie KI-Tools wie GPT, Claude und Gemini helfen können, Geschäftsideen schnell und kostengünstig zu validieren.'
 pubDate: 2026-02-23
 lang: de
 translationSlug: how-ai-can-help-you-validate-your-business-ideas-before-you-invest-everything
