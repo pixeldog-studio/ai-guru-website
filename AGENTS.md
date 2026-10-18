@@ -2,7 +2,7 @@
 
 Marketing site for **Hustlrr**, an iOS/macOS app for chatting with multiple AI models. Static Astro 5 site, Tailwind CSS v4, English + German. Deployed to GitHub Pages at https://www.hustlrr.ai.
 
-**Merging to `main` deploys to production immediately** (`.github/workflows/deploy.yml`). Never push to `main` directly; open a PR.
+**Merging to `main` deploys to production immediately** (`.github/workflows/deploy.yml`). Never push to `main` or `develop` directly; open a PR into `develop`.
 
 Shared workflow: `~/Developer/hq/WORKFLOW.md`. This file lists only facts and gotchas specific to this repo.
 
@@ -92,7 +92,7 @@ Project skills live in `.claude/skills/`:
 - `visual-compare`: diff local changes against production
 - `quality-gate`: all of the above before a risky merge
 
-The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality-gate` skill (receipt in `.hq/receipt.json`) is the PR gate. For browser checks, use whichever browser tool your harness provides against `npm run dev` or `npm run preview`. Shared permissions and hq hooks (worktree-guard, git-guard, config-protection, lint-on-edit, stop-verify) are in `.claude/settings.json`; personal overrides go in `.claude/settings.local.json` (gitignored).
+The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality-gate` skill (receipt in `.hq/receipt.json`) is the PR gate. For browser checks, use whichever browser tool your harness provides against `npm run dev` or `npm run preview`. Shared permissions are in `.claude/settings.json`; the hq hooks (worktree-guard, git-guard, config-protection, lint-on-edit, stop-verify) live in `.claude/hooks/hq/` and must stay byte-identical to hq; personal overrides go in `.claude/settings.local.json` (gitignored).
 
 ## Observability
 
@@ -101,4 +101,6 @@ The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality
 
 ## Linear
 
-- Project: Hustlrr (team FRO). Branch `FRO-123-slug`, PR title `FRO-123: summary`, base `main`.
+- Project: Hustlrr (team FRO).
+- Strict gitflow: `feature/fro-123-slug` (or `bugfix/`) from `develop`; PR title `FRO-123: summary`; PR into `develop`; releases to `main` are human-only.
+- Agents may merge into `develop` after the quality gate and the Nitpickr review; never into `main`.
