@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { getLangFromUrl, useTranslations, getLocalizedPath, getAlternateLang, getAlternatePath, formatDate } from '../../src/i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+  getAlternateLang,
+  getAlternatePath,
+  formatDate,
+} from '../../src/i18n/utils';
 
 describe('getLangFromUrl', () => {
   it('returns "en" for root URL', () => {

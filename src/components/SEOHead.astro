@@ -67,9 +67,7 @@ const fullTitle = `${title} | Hustlrr`;
 {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
 
 <!-- JSON-LD Structured Data -->
-{jsonLd && (
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-)}
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
 <!-- Preload critical fonts -->
 <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />

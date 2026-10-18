@@ -32,20 +32,39 @@ function cellColor(value: string | boolean): string {
 
 <div class="overflow-x-auto rounded-2xl border border-border-strong">
   <table class="w-full text-left text-[15px]">
-    <caption class="sr-only">{t('compare.table.caption').replace('{competitor}', competitor)}</caption>
+    <caption class="sr-only">
+      {t('compare.table.caption').replace('{competitor}', competitor)}
+    </caption>
     <thead>
       <tr class="border-b border-border-strong">
-        <th scope="col" class="px-5 py-4 font-semibold text-text-secondary">{t('compare.table.feature')}</th>
-        <th scope="col" class="px-5 py-4 font-semibold text-accent text-center">Hustlrr</th>
-        <th scope="col" class="px-5 py-4 font-semibold text-text-secondary text-center">{competitor}</th>
+        <th scope="col" class="px-5 py-4 font-semibold text-text-secondary">
+          {t('compare.table.feature')}
+        </th>
+        <th scope="col" class="px-5 py-4 font-semibold text-accent text-center">
+          Hustlrr
+        </th>
+        <th scope="col" class="px-5 py-4 font-semibold text-text-secondary text-center">
+          {competitor}
+        </th>
       </tr>
     </thead>
     <tbody>
       {rows.map((row, i) => (
-        <tr class:list={[i % 2 === 0 ? 'bg-white/[0.02]' : '', 'border-b border-border last:border-b-0']}>
-          <th scope="row" class="px-5 py-3.5 text-white font-normal">{row.feature}</th>
-          <td class:list={['px-5 py-3.5 text-center font-medium', cellColor(row.hustlrr)]}>{renderCell(row.hustlrr)}</td>
-          <td class:list={['px-5 py-3.5 text-center font-medium', cellColor(row.competitor)]}>{renderCell(row.competitor)}</td>
+        <tr
+          class:list={[
+            i % 2 === 0 ? 'bg-white/[0.02]' : '',
+            'border-b border-border last:border-b-0',
+          ]}
+        >
+          <th scope="row" class="px-5 py-3.5 text-white font-normal">
+            {row.feature}
+          </th>
+          <td class:list={['px-5 py-3.5 text-center font-medium', cellColor(row.hustlrr)]}>
+            {renderCell(row.hustlrr)}
+          </td>
+          <td class:list={['px-5 py-3.5 text-center font-medium', cellColor(row.competitor)]}>
+            {renderCell(row.competitor)}
+          </td>
         </tr>
       ))}
     </tbody>

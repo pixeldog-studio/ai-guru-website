@@ -8,9 +8,11 @@ import type { Lang } from '@i18n/translations';
 const lang: Lang = 'en';
 const t = useTranslations(lang);
 
-const posts = (await getCollection('blog', ({ data }) => {
-  return data.lang === lang && !data.draft;
-})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (
+  await getCollection('blog', ({ data }) => {
+    return data.lang === lang && !data.draft;
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <PageLayout
@@ -25,9 +27,7 @@ const posts = (await getCollection('blog', ({ data }) => {
         <h1 class="text-[var(--text-hero)] font-bold font-[var(--font-display)]">
           {t('blog.title')}
         </h1>
-        <p class="text-lg text-text-secondary mt-4 max-w-xl mx-auto">
-          {t('blog.subtitle')}
-        </p>
+        <p class="text-lg text-text-secondary mt-4 max-w-xl mx-auto">{t('blog.subtitle')}</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-stagger">
@@ -47,7 +47,12 @@ const posts = (await getCollection('blog', ({ data }) => {
   <!-- Newsletter signup -->
   <section class="px-5 pb-[var(--spacing-section)]">
     <div class="mx-auto max-w-[600px]" id="blog-listing-newsletter">
-      <script is:inline async data-uid="c6d9f0aca8" src="https://hustlrr-ai.kit.com/c6d9f0aca8/index.js"></script>
+      <script
+        is:inline
+        async
+        data-uid="c6d9f0aca8"
+        src="https://hustlrr-ai.kit.com/c6d9f0aca8/index.js"
+      ></script>
     </div>
     <style is:inline>
       #blog-listing-newsletter .formkit-form {

@@ -17,7 +17,7 @@ review:
     - EN/DE parity (every page, translation key and blog post ships in both languages)
     - App Store links go through APP_STORE_URL; removed URLs get redirects
   ignorePaths:
-    - "**/Package.resolved"
-    - "**/pnpm-lock.yaml"
-    - "package-lock.json"
-    - "assets/**"
+    - '**/Package.resolved'
+    - '**/pnpm-lock.yaml'
+    - 'package-lock.json'
+    - 'assets/**'

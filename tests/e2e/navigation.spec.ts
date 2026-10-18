@@ -3,7 +3,10 @@ import { test, expect } from '@playwright/test';
 test.describe('Navigation', () => {
   test('header blog link works', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Blog' }).click();
+    await page
+      .getByRole('navigation', { name: 'Main navigation' })
+      .getByRole('link', { name: 'Blog' })
+      .click();
     await expect(page).toHaveURL(/\/blog/);
   });
 
@@ -22,8 +25,14 @@ test.describe('Navigation', () => {
   test('footer legal links point to the right places', async ({ page }) => {
     await page.goto('/');
     const footer = page.locator('footer');
-    await expect(footer.getByRole('link', { name: 'Privacy Policies' })).toHaveAttribute('href', /iubenda\.com\/privacy-policy/);
-    await expect(footer.getByRole('link', { name: 'Terms of Service' })).toHaveAttribute('href', /iubenda\.com\/terms-and-conditions/);
+    await expect(footer.getByRole('link', { name: 'Privacy Policies' })).toHaveAttribute(
+      'href',
+      /iubenda\.com\/privacy-policy/,
+    );
+    await expect(footer.getByRole('link', { name: 'Terms of Service' })).toHaveAttribute(
+      'href',
+      /iubenda\.com\/terms-and-conditions/,
+    );
     await footer.getByRole('link', { name: 'Imprint' }).click();
     await expect(page).toHaveURL(/\/imprint/);
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Imprint');

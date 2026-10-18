@@ -6,15 +6,17 @@ import type { Lang } from '@i18n/translations';
 const lang: Lang = 'de';
 ---
 
-<LandingLayout title="Direktlink | Hustlrr" description="Schnellzugriff auf den Hustlrr KI-Chat." lang={lang}>
+<LandingLayout
+  title="Direktlink | Hustlrr"
+  description="Schnellzugriff auf den Hustlrr KI-Chat."
+  lang={lang}
+>
   <div class="animate-hero">
-    <div class="text-5xl mb-6" aria-hidden="true">&#x1F517;</div>
-    <h1 class="text-[var(--text-h1)] font-bold font-[var(--font-display)] mb-4">
-      Schnellzugriff
-    </h1>
-    <p class="text-text-secondary mb-8">
-      Direkt in den KI-gestützten Chat einsteigen.
-    </p>
+    <div class="text-5xl mb-6" aria-hidden="true">
+      &#x1F517;
+    </div>
+    <h1 class="text-[var(--text-h1)] font-bold font-[var(--font-display)] mb-4">Schnellzugriff</h1>
+    <p class="text-text-secondary mb-8">Direkt in den KI-gestützten Chat einsteigen.</p>
     <Button href="https://app.hustlrr.ai" variant="primary" size="lg" external>
       Hustlrr öffnen
     </Button>

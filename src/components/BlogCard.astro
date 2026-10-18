@@ -15,17 +15,16 @@ const t = useTranslations(lang);
 const href = getLocalizedPath(`/blog/${slug}`, lang);
 ---
 
-<a href={href} class="block hover-card rounded-[var(--radius-card)] border border-border bg-bg-card p-6 md:p-8 group">
+<a
+  href={href}
+  class="block hover-card rounded-[var(--radius-card)] border border-border bg-bg-card p-6 md:p-8 group"
+>
   <time class="text-xs text-text-muted uppercase tracking-wider" datetime={pubDate.toISOString()}>
     {formatDate(pubDate, lang)}
   </time>
   <h3 class="text-lg font-semibold font-[var(--font-display)] text-text-primary mt-3 mb-2 group-hover:text-accent transition-colors duration-200">
     {title}
   </h3>
-  <p class="text-sm text-text-secondary leading-relaxed line-clamp-2">
-    {description}
-  </p>
-  <span class="inline-block mt-4 text-sm text-accent font-medium">
-    {t('cta.readMore')} &rarr;
-  </span>
+  <p class="text-sm text-text-secondary leading-relaxed line-clamp-2">{description}</p>
+  <span class="inline-block mt-4 text-sm text-accent font-medium">{t('cta.readMore')} &rarr;</span>
 </a>

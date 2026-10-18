@@ -13,9 +13,7 @@ const { title, description, lang } = Astro.props;
 
 <PageLayout title={title} description={description} lang={lang}>
   <section class="mx-auto max-w-[var(--max-w-article)] px-5 py-16">
-    <h1 class="text-[36px] font-bold mb-6">
-      {title}
-    </h1>
+    <h1 class="text-[36px] font-bold mb-6">{title}</h1>
     <div class="w-full h-px mb-8" style="background-color: rgba(216, 231, 242, 0.15);"></div>
     <div class="prose">
       <slot />
