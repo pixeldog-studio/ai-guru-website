@@ -73,6 +73,8 @@ German copy should read as natural German, not a word-for-word translation. Matc
 
 **AI model names** (GPT-6, Claude Opus 5.5, Gemini 4, Grok 4.7, ...) are repeated across components, translations, compare pages, the service pages and blog posts. To update them, `grep -rn` the old name across `src/` and `tests/` and change every hit in both languages.
 
+**Only claim what the app ships.** The shipped app (and its App Store listing) is the source of truth for every feature, model, platform and price the site mentions. If you can't confirm the app ships something, don't write copy that claims it.
+
 **Product scope**: the app is about multi-model chat. Web-browsing features were deliberately removed from the site. Don't reintroduce browsing claims or "chat with any webpage" copy.
 
 **SEO**: every page renders `SEOHead` via its layout (title, description, canonical, hreflang EN/DE/x-default, OG/Twitter). New pages must go through a layout that includes it. Blog posts get BlogPosting JSON-LD from `BlogLayout`.
