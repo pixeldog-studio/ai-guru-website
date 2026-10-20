@@ -1,38 +1,36 @@
 ---
 import type { Lang } from '@i18n/translations';
 import { useTranslations, getLocalizedPath } from '@i18n/utils';
+import { kitFormAction } from '@lib/kit';
 
 interface Props {
   lang: Lang;
+  /** Kit form ID; defaults to PUBLIC_KIT_FORM_ID. The form is not rendered without one. */
+  formId?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, formId } = Astro.props;
 const t = useTranslations(lang);
 const successUrl = `https://www.hustlrr.ai${getLocalizedPath('/landing/mail-success', lang)}`;
+const action = kitFormAction(formId);
 ---
 
-<!--
-  Kit (ConvertKit) form embed.
-  Replace the action URL with your actual Kit form URL.
-  Create a form at https://app.kit.com/forms and paste the action URL below.
--->
-<form
-  action="https://app.kit.com/forms/YOUR_FORM_ID/subscriptions"
-  method="post"
-  class="flex flex-col sm:flex-row gap-3"
->
-  <input type="hidden" name="redirect_url" value={successUrl} />
-  <input
-    type="email"
-    name="email_address"
-    required
-    placeholder={t('newsletter.placeholder')}
-    class="flex-1 px-4 py-3 rounded-[var(--radius-button)] bg-bg-card border border-border-strong text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-  />
-  <button
-    type="submit"
-    class="hover-button px-6 py-3 rounded-[var(--radius-button)] bg-accent text-white font-medium whitespace-nowrap"
-  >
-    {t('newsletter.button')}
-  </button>
-</form>
+<!-- Kit (ConvertKit) form embed. Hidden until PUBLIC_KIT_FORM_ID is set. -->
+{action && (
+  <form action={action} method="post" class="flex flex-col sm:flex-row gap-3">
+    <input type="hidden" name="redirect_url" value={successUrl} />
+    <input
+      type="email"
+      name="email_address"
+      required
+      placeholder={t('newsletter.placeholder')}
+      class="flex-1 px-4 py-3 rounded-[var(--radius-button)] bg-bg-card border border-border-strong text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+    />
+    <button
+      type="submit"
+      class="hover-button px-6 py-3 rounded-[var(--radius-button)] bg-accent text-white font-medium whitespace-nowrap"
+    >
+      {t('newsletter.button')}
+    </button>
+  </form>
+)}

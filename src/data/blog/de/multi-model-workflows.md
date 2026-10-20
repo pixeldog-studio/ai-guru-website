@@ -6,13 +6,13 @@ lang: de
 translationSlug: multi-model-workflows
 ---
 
-Kein einzelnes KI-Modell ist in allem das Beste. GPT-6 glänzt vielleicht beim kreativen Schreiben, während Claude bei analytischen Aufgaben herausragt. Die wahre Stärke liegt darin, zu wissen, wann welches Modell eingesetzt werden sollte.
+Kein einzelnes KI-Modell ist in allem das Beste. GPT-5 glänzt vielleicht beim kreativen Schreiben, während Claude bei analytischen Aufgaben herausragt. Die wahre Stärke liegt darin, zu wissen, wann welches Modell eingesetzt werden sollte.
 
 ## Warum ein Modell nicht ausreicht
 
 Jedes KI-Modell wird unterschiedlich trainiert und hat eigene Stärken:
 
-- **GPT-6**: Kreatives Schreiben, Brainstorming, Code-Generierung
+- **GPT-5**: Kreatives Schreiben, Brainstorming, Code-Generierung
 - **Claude**: Analyse, sorgfältiges Denken, Verarbeitung langer Dokumente
 - **Gemini**: Multimodale Aufgaben, Datenverarbeitung, visuelles Verständnis
 - **Grok**: Konversationsfluss, Echtzeit-Informationen
@@ -22,12 +22,12 @@ Jedes KI-Modell wird unterschiedlich trainiert und hat eigene Stärken:
 ### Recherche + Schreiben
 
 1. Claude für gründliche Recherche und Analyse
-2. GPT-6 für kreativen, ansprechenden Inhalt
+2. GPT-5 für kreativen, ansprechenden Inhalt
 3. Claude erneut für Faktenprüfung
 
 ### Code-Entwicklung
 
-1. GPT-6 für schnelles Prototyping
+1. GPT-5 für schnelles Prototyping
 2. Claude für Code-Review und Sicherheitsanalyse
 3. Gemini für Dokumentation und visuelle Erklärungen
 

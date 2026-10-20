@@ -2,49 +2,50 @@
 import type { Lang } from '@i18n/translations';
 import { useTranslations, getLocalizedPath } from '@i18n/utils';
 import { APP_STORE_URL } from '@lib/urls';
+import { kitFormAction } from '@lib/kit';
 
 interface Props {
   lang: Lang;
+  /** Kit form ID; defaults to PUBLIC_KIT_FORM_ID. The email card is not rendered without one. */
+  formId?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, formId } = Astro.props;
 const t = useTranslations(lang);
 const successUrl = `https://www.hustlrr.ai${getLocalizedPath('/landing/mail-success', lang)}`;
+const action = kitFormAction(formId);
 ---
 
-<!-- Email signup card -->
-<section class="px-5 py-8">
-  <div class="mx-auto max-w-[var(--max-w-content)]">
-    <div class="animate-reveal rounded-[50px] bg-gradient-to-br from-[#150c21]/70 to-black/90 p-10 md:p-12">
-      <h2 class="text-xl md:text-2xl font-bold text-white mb-2">{t('newsletter.title')}</h2>
-      <p class="text-sm text-text-secondary mb-6">{t('newsletter.subtitle')}</p>
+<!-- Email signup card. Hidden until PUBLIC_KIT_FORM_ID is set. -->
+{action && (
+  <section class="px-5 py-8">
+    <div class="mx-auto max-w-[var(--max-w-content)]">
+      <div class="animate-reveal rounded-[50px] bg-gradient-to-br from-[#150c21]/70 to-black/90 p-10 md:p-12">
+        <h2 class="text-xl md:text-2xl font-bold text-white mb-2">{t('newsletter.title')}</h2>
+        <p class="text-sm text-text-secondary mb-6">{t('newsletter.subtitle')}</p>
 
-      <!-- Email form -->
-      <form
-        action="https://app.kit.com/forms/YOUR_FORM_ID/subscriptions"
-        method="post"
-        class="flex flex-col sm:flex-row gap-3 mb-4 max-w-lg"
-      >
-        <input type="hidden" name="redirect_url" value={successUrl} />
-        <input
-          type="email"
-          name="email_address"
-          required
-          placeholder={t('newsletter.placeholder')}
-          class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
-        />
-        <button
-          type="submit"
-          class="hover-button px-6 py-3 rounded-xl bg-accent text-white font-medium whitespace-nowrap text-sm"
-        >
-          {t('cta.getGuide')}
-        </button>
-      </form>
+        <form action={action} method="post" class="flex flex-col sm:flex-row gap-3 mb-4 max-w-lg">
+          <input type="hidden" name="redirect_url" value={successUrl} />
+          <input
+            type="email"
+            name="email_address"
+            required
+            placeholder={t('newsletter.placeholder')}
+            class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
+          />
+          <button
+            type="submit"
+            class="hover-button px-6 py-3 rounded-xl bg-accent text-white font-medium whitespace-nowrap text-sm"
+          >
+            {t('cta.getGuide')}
+          </button>
+        </form>
 
-      <p class="text-xs text-white/40">{t('newsletter.consent')}</p>
+        <p class="text-xs text-white/40">{t('newsletter.consent')}</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+)}
 
 <!-- Support section -->
 <section class="px-5 py-8">
