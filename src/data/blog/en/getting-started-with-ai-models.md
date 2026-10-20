@@ -1,12 +1,12 @@
 ---
 title: "Getting Started with AI Models: A Beginner's Guide"
-description: 'Learn how to get the most out of AI models like GPT-6, Claude, and Gemini. From basic prompting to advanced techniques.'
+description: 'Learn how to get the most out of AI models like GPT-5, Claude, and Gemini. From basic prompting to advanced techniques.'
 pubDate: 2025-12-15
 lang: en
 translationSlug: getting-started-with-ai-models
 ---
 
-Artificial intelligence has become an essential tool for professionals, creatives, and curious minds alike. With models like GPT-6, Claude, Gemini, and Grok now available through platforms like Hustlrr, getting started has never been easier.
+Artificial intelligence has become an essential tool for professionals, creatives, and curious minds alike. With models like GPT-5, Claude, Gemini, and Grok now available through platforms like Hustlrr, getting started has never been easier.
 
 ## What Are AI Models?
 
@@ -16,7 +16,7 @@ AI models are sophisticated systems trained on vast amounts of text data. They c
 
 Each AI model has its strengths:
 
-- **GPT-6**: Excellent for general-purpose tasks, creative writing, and complex reasoning
+- **GPT-5**: Excellent for general-purpose tasks, creative writing, and complex reasoning
 - **Claude**: Known for careful, nuanced responses and strong analytical capabilities
 - **Gemini**: Great at multimodal tasks combining text, images, and data
 - **Grok**: Strong in real-time information retrieval and conversational tasks

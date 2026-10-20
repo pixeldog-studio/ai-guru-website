@@ -1,12 +1,12 @@
 ---
 title: 'Erste Schritte mit KI-Modellen: Ein Leitfaden für Einsteiger'
-description: 'Erfahren Sie, wie Sie das Beste aus KI-Modellen wie GPT-6, Claude und Gemini herausholen. Von einfachen Prompts bis zu fortgeschrittenen Techniken.'
+description: 'Erfahren Sie, wie Sie das Beste aus KI-Modellen wie GPT-5, Claude und Gemini herausholen. Von einfachen Prompts bis zu fortgeschrittenen Techniken.'
 pubDate: 2025-12-15
 lang: de
 translationSlug: getting-started-with-ai-models
 ---
 
-Künstliche Intelligenz ist zu einem unverzichtbaren Werkzeug für Fachleute, Kreative und Wissbegierige geworden. Mit Modellen wie GPT-6, Claude, Gemini und Grok, die über Plattformen wie Hustlrr verfügbar sind, war der Einstieg noch nie so einfach.
+Künstliche Intelligenz ist zu einem unverzichtbaren Werkzeug für Fachleute, Kreative und Wissbegierige geworden. Mit Modellen wie GPT-5, Claude, Gemini und Grok, die über Plattformen wie Hustlrr verfügbar sind, war der Einstieg noch nie so einfach.
 
 ## Was sind KI-Modelle?
 
@@ -16,7 +16,7 @@ KI-Modelle sind fortschrittliche Systeme, die mit riesigen Mengen an Textdaten t
 
 Jedes KI-Modell hat seine Stärken:
 
-- **GPT-6**: Hervorragend für allgemeine Aufgaben, kreatives Schreiben und komplexes Denken
+- **GPT-5**: Hervorragend für allgemeine Aufgaben, kreatives Schreiben und komplexes Denken
 - **Claude**: Bekannt für sorgfältige, nuancierte Antworten und starke analytische Fähigkeiten
 - **Gemini**: Ideal für multimodale Aufgaben mit Text, Bildern und Daten
 - **Grok**: Stark in Echtzeit-Informationsabruf und konversationellen Aufgaben
