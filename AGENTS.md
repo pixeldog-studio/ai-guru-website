@@ -101,10 +101,10 @@ The local `quality-gate` skill is the site-specific UI/SEO pass; the hq `quality
 ## Observability
 
 - Errors go to: none (static site). No analytics, error tracking or client-side logging is wired up; App Store attribution rides on the campaign parameters in `APP_STORE_URL` and is read in App Store Connect, not here.
-- Build and deploy logs: GitHub Actions (`PR Check` on PRs, `Deploy to GitHub Pages` on `main`). Read them with `gh run list -R rubenspessoa/ai-guru-website` and `gh run view <id> --log-failed`.
+- Build and deploy logs: GitHub Actions (`PR Check` on PRs, `Deploy to GitHub Pages` on `main`). Read them with `gh run list -R pixeldog-studio/ai-guru-website` and `gh run view <id> --log-failed`.
 
-## Linear
+## Tickets
 
-- Project: Hustlrr (team FRO).
-- Strict gitflow: `feature/fro-123-slug` (or `bugfix/`) from `develop`; PR title `FRO-123: summary`; PR into `develop`; releases to `main` are human-only.
-- Agents may merge into `develop` after the quality gate and the Nitpickr review; never into `main`.
+- GitHub issues in `pixeldog-studio/ai-guru-website`, tracked on the org Project "Pixeldog Portfolio" with Product **Hustlrr**. Cross-repo and design work lives in `pixeldog-studio/hq`. Conventions: hq's `pixeldog-github` skill.
+- Strict gitflow: `feature/gh-123-slug` (or `bugfix/`) from `develop`; PR title `#123: summary`; PR body `Closes #123`; PR into `develop`. Without an issue use `feature/<slug>` and PR title `chore: summary`. Releases to `main` are human-only.
+- Merges into `develop` follow WORKFLOW.md §7: only the hub merges, after the quality gate passes and Nitpickr has reviewed the latest head with no open threads; subagents and lanes stop at MERGE-READY. Never into `main`.
