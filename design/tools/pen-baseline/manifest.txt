@@ -1,0 +1,18 @@
+# Hustlrr website as-built captures (pixeldog-studio/ai-guru-website#22). `npm run build` from origin/develop
+# e78df3d, served from dist/ (`python3 -m http.server 4403 --bind 127.0.0.1`). One scheme: the @theme palette is
+# dark and the site has no light mode. English routes only: /de/ mirrors every page with translated copy.
+# Blog posts share one template; the first post stands for all four.
+# <screen> <path>
+home                /
+features-multi-model  /features/multi-model-chat/
+compare-chatgpt     /compare/hustlrr-vs-chatgpt/
+compare-claude      /compare/hustlrr-vs-claude/
+blog                /blog/
+blog-post           /blog/ai-productivity-tips/
+service             /service/
+direct-link         /direct-link/
+mail-business       /landing/mail-business/
+mail-dl             /landing/mail-dl/
+mail-success        /landing/mail-success/
+imprint             /imprint/
+privacy             /privacy/
