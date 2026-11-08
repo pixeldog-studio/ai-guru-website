@@ -1,0 +1,4 @@
+# Browser captures, extracts and per-run working files: local only.
+.refs/
+# Generated optical-size font instances (design/fonts/make-opsz.sh).
+fonts/*.ttf

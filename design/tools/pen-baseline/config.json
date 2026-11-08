@@ -1,0 +1,44 @@
+{
+  "id": "GH-22",
+  "name": "Hustlrr website",
+  "sha": "e78df3d",
+  "file": "hustlrr-website.pen",
+  "base": "http://127.0.0.1:4403",
+  "schemes": ["dark"],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 834,
+      "height": 1112
+    },
+    {
+      "name": "small",
+      "width": 700,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "locale": "en-US",
+  "dsInk": "text-primary",
+  "dsMuted": "text-muted",
+  "dsLine": "border-strong",
+  "dsBg": "bg-primary",
+  "dsFont": "font-inter-16",
+  "fontMap": {
+    "Inter": {
+      "opsz": [14, 15, 16, 17, 18, 20, 22, 24, 26, 28, 30, 32],
+      "prefix": "Inter ",
+      "file": "Inter-opsz{opsz}.ttf",
+      "wght": [100, 900]
+    }
+  }
+}
