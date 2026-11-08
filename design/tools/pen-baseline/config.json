@@ -4,9 +4,7 @@
   "sha": "e78df3d",
   "file": "hustlrr-website.pen",
   "base": "http://127.0.0.1:4403",
-  "schemes": [
-    "dark"
-  ],
+  "schemes": ["dark"],
   "viewports": [
     {
       "name": "desktop",
@@ -37,26 +35,10 @@
   "dsFont": "font-inter-16",
   "fontMap": {
     "Inter": {
-      "opsz": [
-        14,
-        15,
-        16,
-        17,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
+      "opsz": [14, 15, 16, 17, 18, 20, 22, 24, 26, 28, 30, 32],
       "prefix": "Inter ",
       "file": "Inter-opsz{opsz}.ttf",
-      "wght": [
-        100,
-        900
-      ]
+      "wght": [100, 900]
     }
   }
 }
