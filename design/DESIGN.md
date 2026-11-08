@@ -95,23 +95,24 @@ letterSpacing:
   "-0_14": -0.14  # 360 use(s)
   "0_6": 0.6  # 16 use(s)
 spacing:
-  "0_5": 0.5  # 12 use(s), from layout (margins/offsets), no CSS property
+  "0_5": 0.5  # 8 use(s), from layout (margins/offsets), no CSS property
   "1": 1  # 92 use(s), from layout (margins/offsets), no CSS property
   "1_19": 1.19  # 24 use(s), from layout (margins/offsets), no CSS property
   "2_5": 2.5  # 16 use(s), from layout (margins/offsets), no CSS property
   spacing: 4  # 216 use(s)
   "5_5": 5.5  # 48 use(s), from layout (margins/offsets), no CSS property
   "1.5": 6  # 384 use(s)
+  "7_5": 7.5  # 24 use(s), from layout (margins/offsets), no CSS property
   "2": 8  # 56 use(s)
+  "8_5": 8.5  # 4 use(s), from layout (margins/offsets), no CSS property
   "2.5": 10  # 144 use(s)
   "3": 12  # 648 use(s)
   "3.5": 14  # 480 use(s)
   "15": 15  # 96 use(s)
   "15_09": 15.09  # 16 use(s), from layout (margins/offsets), no CSS property
-  "15_5": 15.5  # 24 use(s), from layout (margins/offsets), no CSS property
   "15_88": 15.88  # 8 use(s), from layout (margins/offsets), no CSS property
   "4": 16  # 372 use(s)
-  "16_27": 16.27  # 4 use(s), from layout (margins/offsets), no CSS property
+  "16_27": 16.27  # 1 use(s), from layout (margins/offsets), no CSS property
   "16_5": 16.5  # 4 use(s), from layout (margins/offsets), no CSS property
   "16_63": 16.63  # 4 use(s), from layout (margins/offsets), no CSS property
   "4.5": 18  # 20 use(s)
