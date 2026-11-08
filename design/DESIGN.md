@@ -202,15 +202,16 @@ generated from what the pages render (`design/tools/pen-baseline/README.md`): ca
 
 ## Not in the Pen file
 
-- `/de/`: the same pages with translated copy. Blog posts share one template (one post captured).
-- Hover/focus states, the open mobile menu, animated gradients.
+- `/de/`: the same pages with translated copy.
+- Hover/focus states and animated gradients (the frames show them at rest). The site has no menus, no 404 page and
+  no live forms (`EmailSignup`/`CTASection` aren't used on any page), so there are no other states to show.
 
 ## Open questions
 
 - Radius and type tokens share values with Tailwind's defaults, and the draft names a few after the Tailwind token
   (`rounded-2xl` is 16 px, the same as `--radius-card`). Rename in DESIGN.md to the site's own names?
 - 18 `literal-*` colours: promote the white-alpha set (white at 2, 10, 20, 30, 60, 70 and 80%) to tokens?
-- 43 spacing values across two widths: is a fixed scale wanted?
+- 44 spacing values across four widths (1440, 834, 700, 390): is a fixed scale wanted?
 
 ## Anti-defaults (avoid in every design)
 
