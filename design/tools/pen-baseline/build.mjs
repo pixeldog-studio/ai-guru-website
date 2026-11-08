@@ -10,19 +10,25 @@
 //  - Header and footer subtrees that repeat across pages become components (instances on every other page).
 // Pen ignores $variables on width/height (pen 0.3.14), so sizes are literal measured numbers.
 // Usage: node design/tools/pen-baseline/build.mjs
-import { existsSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  readdirSync,
+  readFileSync,
+  unlinkSync,
+  writeFileSync,
+} from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { penVariables } from "./tokens.mjs";
 import {
   codeVars,
   colorName,
-  penFamily,
-  setFontMap,
   indexTree,
   loadExtracts,
   numberName,
+  penFamily,
   r2,
+  setFontMap,
 } from "./usage.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -88,7 +94,10 @@ const weightVar = (w) => {
 };
 const familyVar = (ff, size) => {
   const f = penFamily(ff, size);
-  const n = `font-${f.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}`;
+  const n = `font-${f
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")}`;
   if (has(n)) return `$${n}`;
   miss(`font ${f}`);
   return f;
@@ -174,7 +183,8 @@ function fillsOf(n, d) {
 }
 // rgb()/rgba() inside gradients -> hex (computed styles are always rgb/rgba or color())
 function cssColor(c) {
-  if (/^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/.test(c || "")) return c.toUpperCase();
+  if (/^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/.test(c || ""))
+    return c.toUpperCase();
   const m = /rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?\)/.exec(
     c,
   );
@@ -310,7 +320,12 @@ function textNodes(run, el, d, origin, paragraph) {
   }
   // Mixed inline content: one positioned text per line, with the words the browser put on that line
   // (extract.js measures each word).
-  const tt = (x) => (s.textTransform === "uppercase" ? x.toUpperCase() : s.textTransform === "lowercase" ? x.toLowerCase() : x);
+  const tt = (x) =>
+    s.textTransform === "uppercase"
+      ? x.toUpperCase()
+      : s.textTransform === "lowercase"
+        ? x.toLowerCase()
+        : x;
   const out = [];
   for (const q of lines) {
     const chunk = tt(q.text || "").trim();
@@ -419,6 +434,28 @@ function layoutFor(n, kids) {
     };
   }
   return null;
+}
+
+// A CSS-rotated leaf (no element children): Pen box of the layout size, rotated about its top-left corner, placed
+// so it lands where the browser drew it (transform-origin at the centre, the CSS default).
+function rotate(node, n, origin) {
+  const xf = n.xf;
+  if (!xf || (n.kids || []).length) return node;
+  const th = Math.atan2(xf.b, xf.a);
+  const w = xf.w * Math.hypot(xf.a, xf.b);
+  const h = xf.h * Math.hypot(xf.c, xf.d);
+  const cx = n.rect.x + n.rect.w / 2;
+  const cy = n.rect.y + n.rect.h / 2;
+  const x = cx + Math.cos(th) * (-w / 2) - Math.sin(th) * (-h / 2);
+  const y = cy + Math.sin(th) * (-w / 2) + Math.cos(th) * (-h / 2);
+  return {
+    ...node,
+    x: r2(x - origin.x),
+    y: r2(y - origin.y),
+    width: r2(w),
+    height: r2(h),
+    rotation: r2((-th * 180) / Math.PI),
+  };
 }
 
 function convert(n, D, origin, ctx) {
@@ -605,7 +642,15 @@ function convert(n, D, origin, ctx) {
       flowKids.push(...t);
     } else {
       const c = convert(k, D, myOrigin, ctx);
-      if (outOfFlow(k))
+      if (k.xf && c.length === 1) c[0] = rotate(c[0], k, myOrigin); // rotated icons and images too
+      // CSS stacking: a positioned child with a z-index paints above (or below) its siblings regardless of DOM
+      // order. Pen paints in child order, so those children come out of the flow and are re-ordered by z.
+      const z =
+        k.s && k.s.position !== "static" && /^-?\d+$/.test(k.s.zIndex)
+          ? Number(k.s.zIndex)
+          : 0;
+      for (const x of c) if (z && x._z === undefined) x._z = z;
+      if (outOfFlow(k) || z)
         c.forEach((x) => {
           x.layoutPosition = "absolute";
           x._abs = true;
@@ -657,6 +702,12 @@ function convert(n, D, origin, ctx) {
   }
   if (s.opacity < 1) frame.opacity = s.opacity;
   if (clip) frame.clip = true;
+  const byZ = (list) =>
+    list
+      .map((k, i) => [k, i])
+      .sort((a, c) => (a[0]._z || 0) - (c[0]._z || 0) || a[1] - c[1])
+      .map(([k]) => k);
+  kids.splice(0, kids.length, ...byZ(kids));
   const lay = layoutFor(n, flowKids);
   if (lay) {
     Object.assign(
@@ -685,7 +736,7 @@ function convert(n, D, origin, ctx) {
     frame.children = kids;
     if (kids.length) ctx.stats.absolute++;
   }
-  return [frame];
+  return [rotate(frame, n, origin)];
 }
 
 // ---------- pages ----------
@@ -1012,13 +1063,19 @@ for (const [, list] of byScreen) {
 
 // Fonts Pen loads from design/fonts: config "fonts", plus one variable-weight entry per opsz instance.
 const opszFonts = Object.values(cfg.fontMap || {})
-  .filter((m) => m && m.opsz)
+  .filter((m) => m?.opsz)
   .flatMap((m) =>
     m.opsz.map((o) => ({
       name: `${m.prefix}${o}`,
       url: `fonts/${m.file.replace("{opsz}", o)}`,
       weight: m.wght || [100, 900],
-      axes: [{ tag: "wght", start: (m.wght || [100, 900])[0], end: (m.wght || [100, 900])[1] }],
+      axes: [
+        {
+          tag: "wght",
+          start: (m.wght || [100, 900])[0],
+          end: (m.wght || [100, 900])[1],
+        },
+      ],
     })),
   );
 const allFonts = [...(cfg.fonts || []), ...opszFonts];
@@ -1049,7 +1106,8 @@ if (existsSync(imgDir)) {
     }
   }
 }
-if (pruned) console.log(`pruned ${pruned} unreferenced image(s) from design/images`);
+if (pruned)
+  console.log(`pruned ${pruned} unreferenced image(s) from design/images`);
 // Accumulates across runs so the next tokens-draft keeps them (delete .refs/unbound.json to start over).
 const ubFile = join(design, ".refs", "unbound.json");
 const prev = existsSync(ubFile)

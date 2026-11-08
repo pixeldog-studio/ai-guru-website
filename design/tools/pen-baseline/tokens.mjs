@@ -124,12 +124,24 @@ export function penVariables(
           };
   }
   // colorsExtra: colours outside the code's token source (literals, framework palette); same format as colors.
-  const hexOf = (v) => (/^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/.test(String(v)) ? String(v).toUpperCase() : null);
+  const hexOf = (v) =>
+    /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/.test(String(v))
+      ? String(v).toUpperCase()
+      : null;
   for (const [name, v] of Object.entries(fm.colorsExtra || {})) {
     const light = typeof v === "object" ? hexOf(v.light) : hexOf(v);
     const dark = typeof v === "object" ? hexOf(v.dark || v.light) : light;
     if (!light) continue;
-    variables[name] = light === dark ? { type: "color", value: light } : { type: "color", value: [{ value: light, theme: { mode: "light" } }, { value: dark, theme: { mode: "dark" } }] };
+    variables[name] =
+      light === dark
+        ? { type: "color", value: light }
+        : {
+            type: "color",
+            value: [
+              { value: light, theme: { mode: "light" } },
+              { value: dark, theme: { mode: "dark" } },
+            ],
+          };
   }
   const put = (name, value) => {
     if (typeof value === "number") variables[name] = { type: "number", value };

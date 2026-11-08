@@ -1,7 +1,8 @@
 # Hustlrr website as-built captures (pixeldog-studio/ai-guru-website#22). `npm run build` from origin/develop
 # e78df3d, served from dist/ (`python3 -m http.server 4403 --bind 127.0.0.1`). One scheme: the @theme palette is
 # dark and the site has no light mode. English routes only: /de/ mirrors every page with translated copy.
-# Blog posts share one template; the first post stands for all four.
+# Widths: desktop 1440 (lg), tablet 834 (md), small 700 (sm), mobile 390. No interactive states ship: the
+# EmailSignup/CTASection forms aren't used on any page, and there is no menu or 404 page in src/pages.
 # <screen> <path>
 home                /
 features-multi-model  /features/multi-model-chat/
@@ -9,6 +10,9 @@ compare-chatgpt     /compare/hustlrr-vs-chatgpt/
 compare-claude      /compare/hustlrr-vs-claude/
 blog                /blog/
 blog-post           /blog/ai-productivity-tips/
+blog-post-getting-started  /blog/getting-started-with-ai-models/
+blog-post-validate-ideas   /blog/how-ai-can-help-you-validate-your-business-ideas-before-you-invest-everything/
+blog-post-multi-model      /blog/multi-model-workflows/
 service             /service/
 direct-link         /direct-link/
 mail-business       /landing/mail-business/

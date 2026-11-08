@@ -62,18 +62,31 @@ const themeHex = new Map();
 const scanCss = (dir) => {
   if (!existsSync(dir)) return;
   for (const e of readdirSync(dir, { withFileTypes: true })) {
-    if (e.name.startsWith(".") || e.name === "node_modules" || e.name === "dist") continue;
+    if (
+      e.name.startsWith(".") ||
+      e.name === "node_modules" ||
+      e.name === "dist"
+    )
+      continue;
     const p = join(dir, e.name);
     if (e.isDirectory()) scanCss(p);
     else if (e.name.endsWith(".css"))
-      for (const b of readFileSync(p, "utf8").matchAll(/@theme[^{]*\{([^}]*)\}/g))
-        for (const m of b[1].matchAll(/--color-([\w-]+)\s*:\s*(#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?)\s*;/g)) themeHex.set(m[1], m[2].toUpperCase());
+      for (const b of readFileSync(p, "utf8").matchAll(
+        /@theme[^{]*\{([^}]*)\}/g,
+      ))
+        for (const m of b[1].matchAll(
+          /--color-([\w-]+)\s*:\s*(#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?)\s*;/g,
+        ))
+          themeHex.set(m[1], m[2].toUpperCase());
   }
 };
 scanCss(join(design, "..", cfg.cssDir || "src"));
 const colorEntries = [...use.colors.entries()]
   .map(([k, n]) => [colorName(k, vars), k, n])
-  .sort((a, b) => a[0].startsWith("literal") - b[0].startsWith("literal") || b[2] - a[2]);
+  .sort(
+    (a, b) =>
+      a[0].startsWith("literal") - b[0].startsWith("literal") || b[2] - a[2],
+  );
 const seen = new Set();
 const line = (name, key, note) => {
   const [l, dk] = key.split("|");
@@ -86,12 +99,25 @@ for (const [name, key, n] of colorEntries) {
   seen.add(name);
   const note = `${n} use(s)${name.startsWith("literal") ? ", no custom property" : ""}${derived.has(`c:${key}`) ? ", gradient stop or page background" : ""}`;
   if (!themeHex.size || themeHex.has(name)) main.push(line(name, key, note));
-  else extra.push(line(name, key, `${note}${name.startsWith("literal") ? "" : ", not a hex @theme colour of this repo"}`));
+  else
+    extra.push(
+      line(
+        name,
+        key,
+        `${note}${name.startsWith("literal") ? "" : ", not a hex @theme colour of this repo"}`,
+      ),
+    );
 }
 for (const [name, hex] of themeHex) {
   if (seen.has(name)) continue;
   seen.add(name);
-  main.push(line(name, `${hex}|${hex}`, "defined in @theme, not rendered on the captured pages"));
+  main.push(
+    line(
+      name,
+      `${hex}|${hex}`,
+      "defined in @theme, not rendered on the captured pages",
+    ),
+  );
 }
 out.push("colors:", ...main);
 if (extra.length) out.push("colorsExtra:", ...extra);
@@ -99,7 +125,10 @@ out.push("typography:", "  families:");
 const fam = [...use.fonts.entries()].sort((a, b) => b[1] - a[1]);
 for (const [f, n] of fam)
   out.push(
-    `    ${f.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}: ${q(f)}  # ${n} text node(s)`,
+    `    ${f
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")}: ${q(f)}  # ${n} text node(s)`,
   );
 const section = (title, key, map, fmt = (v) => v) => {
   out.push(`${title}:`);

@@ -49,7 +49,9 @@ export const penFamily = (ff, size) => {
   if (m.opsz) {
     // One instance per optical size (design/fonts/install-sf.sh): the listed size nearest to the font size.
     const want = Math.max(m.opsz[0], Math.round(size));
-    const pick = m.opsz.reduce((a, b) => (Math.abs(b - want) < Math.abs(a - want) ? b : a));
+    const pick = m.opsz.reduce((a, b) =>
+      Math.abs(b - want) < Math.abs(a - want) ? b : a,
+    );
     return `${m.prefix}${pick}`;
   }
   return size >= (m.switchAt || 20) ? m.display : m.text;
